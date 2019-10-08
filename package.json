@@ -1,0 +1,27 @@
+{
+  "name": "cultivate",
+  "version": "1.0.0",
+  "description": "Laboratoria project SCL011 ",
+  "main": "src/index.html",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "keywords": [
+    "rrss",
+    "laboratoria",
+    "scl011",
+    "socialnetwork",
+    "cultivate"
+  ],
+  "author": "Camila Martínez, Fernanda Lennon, Constanza Castro, Cecilia Geraldo",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.2"
+  },
+  "dependencies": {
+    "firebase": "^7.1.0"
+  }
+}

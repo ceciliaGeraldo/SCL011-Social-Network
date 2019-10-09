@@ -7,8 +7,7 @@ import {templateSignUp} from '/views/signUp.js';
 const init = () => {
 
     initFirebase();
-
-    templateSignUp()
+    templateSignUp();
 
 }
 

@@ -1,3 +1,4 @@
+
 //Vista de registros
 
 
@@ -21,3 +22,4 @@ divContainer.innerHTML+=
 // let password =document.getElementById("pasword").value
 
 // })
+

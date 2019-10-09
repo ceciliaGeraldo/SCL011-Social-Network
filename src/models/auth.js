@@ -1,3 +1,4 @@
+
 // crear usuario nuevo 
 
 export let createUser = firebase.auth().createUserWithEmailAndPassword(email, password)
@@ -42,4 +43,5 @@ const authentication = (provider) => {
 }
 
 //Create new user with Facebook
+
 

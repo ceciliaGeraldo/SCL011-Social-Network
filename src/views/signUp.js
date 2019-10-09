@@ -13,13 +13,14 @@ divContainer.innerHTML+=
                 <button id="register">Registrarse</button>
             </div>
         </main>`
+
+
+let  send = document.getElementById("register")
+send.addEventListener("click", () => {
+
+let email =document.getElementById("email").value
+let password =document.getElementById("pasword").value
+
+})
+
 }
-
-// let  send = document.getElementById("register")
-// send.addEventListener("click", () => {
-
-// let email =document.getElementById("email").value
-// let password =document.getElementById("pasword").value
-
-// })
-

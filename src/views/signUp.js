@@ -7,3 +7,4 @@ divContainer.innerHTML+=
                 <button id="register">Registrarse</button>
             </div>
         </main>`
+

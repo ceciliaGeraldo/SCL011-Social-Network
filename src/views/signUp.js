@@ -14,6 +14,7 @@ divContainer.innerHTML+=
             </div>
         </main>`
 
+
 const  send = document.getElementById("register");
 send.addEventListener("click", () => {
 
@@ -23,6 +24,3 @@ createUser(email,password);
 })
         
 }
-
-
-

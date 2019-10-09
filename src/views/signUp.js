@@ -1,8 +1,9 @@
+
 //Vista de registros
 
 
 export const templateSignUp = () =>{
-document.getElementById('root');
+const divContainer = document.getElementById('root');
 divContainer.innerHTML+=
         `<main>
             <div>
@@ -14,10 +15,11 @@ divContainer.innerHTML+=
         </main>`
 }
 
-export let  send = document.getElementById("register")
-enviar.addEventListener("click", () => {
+// let  send = document.getElementById("register")
+// send.addEventListener("click", () => {
 
-let email =document.getElementById("email").value
-let password =document.getElementById("pasword").value
+// let email =document.getElementById("email").value
+// let password =document.getElementById("pasword").value
 
-})
+// })
+

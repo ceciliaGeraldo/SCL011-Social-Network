@@ -1,6 +1,7 @@
+
 // crear usuario nuevo 
 
-export let createUser =firebase.auth().createUserWithEmailAndPassword(email, password)
+export let createUser = firebase.auth().createUserWithEmailAndPassword(email, password)
 .catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -14,7 +15,7 @@ export let createUser =firebase.auth().createUserWithEmailAndPassword(email, pas
 //Create new user with Google
 export const authGoogle = () => {
 
-    const provider = new.firebase.auth.GoogleAuthProvider();
+    const provider = new firebase.auth.GoogleAuthProvider();
     authentication(provider);
 }
 
@@ -42,4 +43,5 @@ const authentication = (provider) => {
 }
 
 //Create new user with Facebook
+
 

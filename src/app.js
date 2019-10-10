@@ -1,7 +1,6 @@
 
-import { initFirebase } from '/models/initFirebase.js';
-import {templateSignUp} from '/views/signUp.js';
-
+import { initFirebase } from '/assets/js/initFirebase.js';
+import {templateSignUp} from '/assets/views/signUp.js';
 
 //Inicializamos Firebase y el observador
 const init = () => {

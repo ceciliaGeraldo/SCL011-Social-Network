@@ -1,7 +1,9 @@
-// crear usuario nuevo 
+//Crear usuario nuevo 
 export const createUser = (email,password) =>{
 
     firebase.auth().createUserWithEmailAndPassword(email, password)
+    .then(()=>{
+        checkEmail()})
 .catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -9,7 +11,22 @@ export const createUser = (email,password) =>{
     // ...
   })
 }
- 
+
+//Enviar mensaje de verificación al usuario
+const checkEmail = () =>{
+
+let user = firebase.auth().currentUser;
+
+user.sendEmailVerification().then(function() {
+  // Email sent.
+}).catch(function(error) {
+  // An error happened.
+});
+
+}
+
+//Configuracion de un observador  , verifica que si hay un cambio de usuario o alguien se registra y ejecuta los comandos
+
 
 // acceso con usuario ya creado
 

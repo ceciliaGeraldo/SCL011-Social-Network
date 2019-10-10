@@ -1,3 +1,19 @@
+# Cultivate
+
+Te invitamos a ser parte de la comunidad de cultivo más grande en Chile. 
+En Cultiva-te encontrarás todo lo que necesitas para tus cultivos, desde información de plantas, métodos de cultivo, ranking mejores productos, calendarios de cultivos, eventos de intercambio de semillas y mucho más... ¡Todo esto compartido por mismos miembros de la comunidad!
+Únete a Cultivapp y súmate a la conversación.
+
+## Preámbulo
+En la actualidad debido a los avances de la tecnología y la evolución de la sociedad, nos vemos inmersos en un mundo totalmente digital. Y con ello han llegado las redes sociales dominando el mercado de la comunicación a tal nivel, que muchos hemos hecho un hábito el interactuar con nuestro entorno a través de ellas, entre las más conocidas: Instagram, Facebook, Snapchat, Twiter, Pinterest. 
+Hay para todos los gustos e intereses, como también para todas las edades. Es por esto que hemos tomado como alternativa, crear nuestra comunidad a base de su propia red social.
+
+## Nuestro Usuario
+Cultivapp es una aplicación web dirigida a personas mayores de edad con intereses sobre **horticultura**.
+>_**Horticultura**:  La horticultura se puede definir como “el arte y la ciencia de cultivar las plantas”, o “el estudio del desarrollo, manejo, distribución y utilización de los cultivos hortícolas”._
+
+***
+
 # Creando una Red Social
 
 ## Índice

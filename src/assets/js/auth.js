@@ -1,3 +1,5 @@
+import {checkEmail} from '/assets/js/validation.js'
+
 //Crear usuario nuevo 
 export const createUser = (email,password) =>{
 
@@ -6,24 +8,24 @@ export const createUser = (email,password) =>{
         checkEmail()})
 .catch(function(error) {
     // Handle Errors here.
+    
     var errorCode = error.code;
     var errorMessage = error.message;
     // ...
   })
 }
+//Validacion de campos vacios 
 
-//Enviar mensaje de verificación al usuario
-const checkEmail = () =>{
-
-let user = firebase.auth().currentUser;
-
-user.sendEmailVerification().then(function() {
-  // Email sent.
-}).catch(function(error) {
-  // An error happened.
-});
-
+ export const validar2 = (email,password) => {
+  if( email == "" &&  password == ""  && name == ""  ){
+  return false
+  }
+  else{
+    return true 
+  }
 }
+
+
 
 //Configuracion de un observador  , verifica que si hay un cambio de usuario o alguien se registra y ejecuta los comandos
 

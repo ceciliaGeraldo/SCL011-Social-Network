@@ -1,7 +1,9 @@
 
 //Vista de registros
-import { createUser } from '/assets/js/auth.js'
+
+import { createUser , validar2} from '/assets/js/auth.js'
 import {templateLogIn} from '/assets/views/logIn.js'
+
 
 export const templateSignUp = () =>{
 const divContainer = document.getElementById('root');
@@ -24,6 +26,13 @@ send.addEventListener("click", () => {
 
 let email =document.getElementById("email").value;
 let password =document.getElementById("password").value;
+const divContainer2 = document.getElementById('root1');
+let prueba = validar2(email,password)
+
+if(prueba==false){
+    divContainer2.innerHTML = "llena los campos"
+}
+//validar2(email,password)
 createUser(email,password);
 })
 

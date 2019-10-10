@@ -4,8 +4,8 @@
         "node":true,
         "es6":true
     },
-    "parserOptions":
-    {
+    "parserOptions":{
+
         "ecmaVersion":2018,
         "sourceType":"module"
     }

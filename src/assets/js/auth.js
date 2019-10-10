@@ -8,10 +8,21 @@ export const createUser = (email,password) =>{
         checkEmail()})
 .catch(function(error) {
     // Handle Errors here.
+    
     var errorCode = error.code;
     var errorMessage = error.message;
     // ...
   })
+}
+//Validacion de campos vacios 
+
+ export const validar2 = (email,password) => {
+  if( email == "" &&  password == ""  && name == ""  ){
+  return false
+  }
+  else{
+    return true 
+  }
 }
 
 

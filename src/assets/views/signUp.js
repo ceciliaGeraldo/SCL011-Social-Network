@@ -1,6 +1,8 @@
 
 //Vista de registros
+
 import { createUser , validar2} from '/assets/js/auth.js'
+import {templateLogIn} from '/assets/views/logIn.js'
 
 
 export const templateSignUp = () =>{
@@ -8,8 +10,8 @@ const divContainer = document.getElementById('root');
 divContainer.innerHTML+=
         `<main>
             <div>
-                <button id="Login">Login</button>
-                <button id="SignIn">Sign in</button>
+                <button id="login">Login</button>
+                <button id="signUp">Sign Up</button>
                 <input type="text" id="name" placeholder="Ingrese Nombre">
                 <input type="email" id="email" placeholder="Ingrese correo">
                 <input type="password" id="password" placeholder="Ingrese contraseña">
@@ -33,6 +35,11 @@ if(prueba==false){
 //validar2(email,password)
 createUser(email,password);
 })
-        
+
+const logIn = document.getElementById("login");
+logIn.addEventListener("click",()=>{
+    divContainer.innerHTML="";
+    templateLogIn();
+})
 }
 

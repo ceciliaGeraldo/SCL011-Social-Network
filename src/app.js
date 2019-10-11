@@ -9,6 +9,7 @@ const init = () => {
 
     initFirebase();
     //templateCSS();
+    observer();
     templateSignUp();
     observer()
 

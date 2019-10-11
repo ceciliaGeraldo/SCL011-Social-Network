@@ -35,7 +35,7 @@ export const createUser = (email,password) =>{
 
 // Acceso con usuario ya creado
 
-export const LogIn = (emailLogIn, passwordLogIn ,) =>{
+export const LogIn = (emailLogIn, passwordLogIn) =>{
 firebase.auth().signInWithEmailAndPassword(emailLogIn, passwordLogIn)
 .catch(function(error) {
   // Handle Errors here.
@@ -47,12 +47,14 @@ firebase.auth().signInWithEmailAndPassword(emailLogIn, passwordLogIn)
   
   // ...
 })
+initFeed();
 }
 //Configuracion de un observador  , verifica que si hay un cambio de usuario o alguien se registra y ejecuta los comandos
 
 export const observer = () => { 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
+    console.log(user);
     // User is signed in.
     let displayName = user.displayName;
     let email = user.email;
@@ -63,7 +65,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     let providerData = user.providerData;
     // ...
   } else {
-      console.log("no exicte usuario");
+      console.log("no existe usuario");
       
     // User is signed out.
     // ...

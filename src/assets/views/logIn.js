@@ -23,20 +23,23 @@ document.getElementById("signUp").addEventListener('click',()=>{
     templateSignUp();
 
     
-})
+});
 
 
 document.getElementById("GoHome").addEventListener('click', ()=>{
     let emailLogIn =document.getElementById("emailLogIn").value;
     let passwordLogIn =document.getElementById("passwordLogIn").value;
-    LogIn(emailLogIn,passwordLogIn )
+    LogIn(emailLogIn,passwordLogIn);
+
+});
 
 const btnGoogle = document.getElementById("google");
 btnGoogle.addEventListener("click",()=>{
 
     authGoogle();
 
-})
+});
+
 const btnFacebook = document.getElementById("facebook");
 btnFacebook.addEventListener("click",()=>{
 

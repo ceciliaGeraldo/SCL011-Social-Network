@@ -1,6 +1,6 @@
 export const initFeed = () => {
     const divContainer = document.getElementById('root');
-    divContainer.innerHTML="";
+    divContainer.innerHTML = "";
     divContainer.innerHTML +=
         `<main>
                 <div>

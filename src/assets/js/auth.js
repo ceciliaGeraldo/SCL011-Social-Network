@@ -8,7 +8,6 @@ export const createUser = (email,password) =>{
     firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(()=>{
         checkEmail();
-        initFeed();
 
         })
 .catch(function(error) {
@@ -36,18 +35,31 @@ export const createUser = (email,password) =>{
 // Acceso con usuario ya creado
 
 export const LogIn = (emailLogIn, passwordLogIn) =>{
+
 firebase.auth().signInWithEmailAndPassword(emailLogIn, passwordLogIn)
+.then(function(){
+
+  const user = firebase.auth().currentUser;
+  if(user.emailVerified===true){
+    console.log("iniciar sesión, datos válidos");
+    initFeed();
+  }else{
+    console.log("no ha validado su mail");
+  }
+  
+})
 .catch(function(error) {
   // Handle Errors here.
+ 
   let errorCode = error.code;
   let errorMessage = error.message;
 
   console.log(errorCode );
   console.log(errorMessage )
   
+  
   // ...
 })
-initFeed();
 }
 //Configuracion de un observador  , verifica que si hay un cambio de usuario o alguien se registra y ejecuta los comandos
 
@@ -63,6 +75,14 @@ firebase.auth().onAuthStateChanged(function(user) {
     let isAnonymous = user.isAnonymous;
     let uid = user.uid;
     let providerData = user.providerData;
+
+    if(emailVerified === true){
+      console.log("Iniciada sesión");
+    }else{
+      console.log("El correo no está registrado o no ha sido verificado")
+    
+  }
+
     // ...
   } else {
       console.log("no existe usuario");
@@ -75,11 +95,13 @@ firebase.auth().onAuthStateChanged(function(user) {
 }
 
 
+
 //Create new user with Google
 export const authGoogle = () => {
 
     const provider = new firebase.auth.GoogleAuthProvider();
     authentication(provider);
+    initFeed();
 }
 
 const authentication = (provider) => {
@@ -111,6 +133,16 @@ export const authFacebook = () => {
 
     const provider = new firebase.auth.FacebookAuthProvider();
     authentication(provider);
+    initFeed();
 }
 
+export const signOutSession = () => {
 
+  firebase.auth().signOut()
+  .then(function(){
+    console.log("sesión cerrada")
+  })
+  .catch(function(error){
+    console.log(error);
+  })
+}

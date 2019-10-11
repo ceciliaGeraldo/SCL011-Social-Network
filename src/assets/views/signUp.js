@@ -1,6 +1,6 @@
 
 //Vista de registros
-import { createUser , validar2, authGoogle, authFacebook } from '/assets/js/auth.js'
+import { createUser , authGoogle, authFacebook } from '/assets/js/auth.js'
 import {templateLogIn} from '/assets/views/logIn.js'
 import {valideImput ,validEmail , validPassword} from '/assets/js/validation.js'
 

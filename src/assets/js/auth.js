@@ -1,6 +1,7 @@
 import {checkEmail} from '/assets/js/validation.js'
 
 //Crear usuario nuevo 
+
 export const createUser = (email,password) =>{
 
     firebase.auth().createUserWithEmailAndPassword(email, password)
@@ -9,28 +10,52 @@ export const createUser = (email,password) =>{
 .catch(function(error) {
     // Handle Errors here.
     
-    var errorCode = error.code;
-    var errorMessage = error.message;
+    let errorCode = error.code;
+    let errorMessage = error.message;
+    console.log(errorCode ); // errores que dicen que el email ya esta usado
+    console.log(errorMessage )
     // ...
   })
 }
-//Validacion de campos vacios 
 
- export const validar2 = (email,password) => {
-  if( email == "" &&  password == ""  && name == ""  ){
-  return false
-  }
-  else{
-    return true 
-  }
+// Acceso con usuario ya creado
+
+export const LogIn = (emailLogIn, passwordLogIn ,) =>{
+firebase.auth().signInWithEmailAndPassword(emailLogIn, passwordLogIn)
+.catch(function(error) {
+  // Handle Errors here.
+  let errorCode = error.code;
+  let errorMessage = error.message;
+
+  console.log(errorCode );
+  console.log(errorMessage )
+  
+  // ...
+})
 }
-
-
-
 //Configuracion de un observador  , verifica que si hay un cambio de usuario o alguien se registra y ejecuta los comandos
 
+export const observer = () => { 
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    let displayName = user.displayName;
+    let email = user.email;
+    let emailVerified = user.emailVerified;
+    let photoURL = user.photoURL;
+    let isAnonymous = user.isAnonymous;
+    let uid = user.uid;
+    let providerData = user.providerData;
+    // ...
+  } else {
+      console.log("no exicte usuario");
+      
+    // User is signed out.
+    // ...
+  }
+});   
 
-// acceso con usuario ya creado
+}
 
 
 //Create new user with Google

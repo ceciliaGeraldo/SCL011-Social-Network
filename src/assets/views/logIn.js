@@ -1,7 +1,5 @@
 import {templateSignUp} from '/assets/views/signUp.js'
 import {authGoogle, authFacebook, LogIn} from '/assets/js/auth.js'
- 
-
 
 export const templateLogIn = () => {
     const divContainer = document.getElementById('root');
@@ -30,10 +28,12 @@ document.getElementById("signUp").addEventListener('click',()=>{
 document.getElementById("GoHome").addEventListener('click', ()=>{
     let emailLogIn =document.getElementById("emailLogIn").value;
     let passwordLogIn =document.getElementById("passwordLogIn").value;
+
     //observer();
     LogIn(emailLogIn,passwordLogIn);
 
 });
+
 
 const btnGoogle = document.getElementById("google");
 btnGoogle.addEventListener("click",()=>{
@@ -48,6 +48,6 @@ btnFacebook.addEventListener("click",()=>{
     authFacebook();
 
 
-})
+});
 
 }

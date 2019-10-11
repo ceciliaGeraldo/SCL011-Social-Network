@@ -11,6 +11,7 @@ const init = () => {
     //templateCSS();
     observer();
     templateSignUp();
+    observer()
 
 }
 

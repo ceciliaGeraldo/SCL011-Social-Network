@@ -20,16 +20,10 @@ export const createUser = (email,password) =>{
     // ...
   })
 }
+// mostrar error de usuario ya registrado
 
-//Validacion de campos vacios 
+export const registeredEmail = () => {
 
- export const validar2 = (email,password) => {
-  if( email == "" &&  password == ""  && name == ""  ){
-  return false;
-  }
-  else{
-    return true; 
-  }
 }
 
 // Acceso con usuario ya creado
@@ -48,14 +42,13 @@ firebase.auth().signInWithEmailAndPassword(emailLogIn, passwordLogIn)
   }
   
 })
+
 .catch(function(error) {
   // Handle Errors here.
  
   let errorCode = error.code;
   let errorMessage = error.message;
 
-  console.log(errorCode );
-  console.log(errorMessage )
   
   
   // ...
@@ -68,6 +61,8 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     console.log(user);
     // User is signed in.
+    console.log(user);
+    
     let displayName = user.displayName;
     let email = user.email;
     let emailVerified = user.emailVerified;
@@ -86,7 +81,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     // ...
   } else {
       console.log("no existe usuario");
-      
+
     // User is signed out.
     // ...
   }

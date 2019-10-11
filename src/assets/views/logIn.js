@@ -1,4 +1,5 @@
 import {templateSignUp} from '/assets/views/signUp.js'
+import {authGoogle, authFacebook} from '/assets/js/auth.js'
 
 export const templateLogIn = () => {
     const divContainer = document.getElementById('root');
@@ -7,7 +8,7 @@ export const templateLogIn = () => {
                 <div>
                     <button id="login">Login</button>
                     <button id="signUp">Sign Up</button>
-                    <input type="email" id="email" placeholder="Ingrese correo">
+                    <input type="emailSign" id="email" placeholder="Ingrese correo">
                     <input type="password" id="password" placeholder="Ingrese contraseña">
                     <button id="google">Google</button>
                     <button id="facebook">Facebook</button>
@@ -18,4 +19,17 @@ document.getElementById("signUp").addEventListener('click',()=>{
     templateSignUp();
 
 })
+const btnGoogle = document.getElementById("google");
+btnGoogle.addEventListener("click",()=>{
+
+    authGoogle();
+
+})
+const btnFacebook = document.getElementById("facebook");
+btnFacebook.addEventListener("click",()=>{
+
+    authFacebook();
+
+})
+
 }

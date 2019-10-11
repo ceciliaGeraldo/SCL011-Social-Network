@@ -1,11 +1,10 @@
 
 //Vista de registros
-
-import { createUser , validar2} from '/assets/js/auth.js'
+import { createUser , validar2, authGoogle, authFacebook } from '/assets/js/auth.js'
 import {templateLogIn} from '/assets/views/logIn.js'
 
 
-export const templateSignUp = () =>{
+export const templateSignUp = () =>{    
 const divContainer = document.getElementById('root');
 divContainer.innerHTML+=
         `<main>
@@ -41,5 +40,20 @@ logIn.addEventListener("click",()=>{
     divContainer.innerHTML="";
     templateLogIn();
 })
+
+const btnGoogle = document.getElementById("google");
+btnGoogle.addEventListener("click",()=>{
+
+    authGoogle();
+
+})
+const btnFacebook = document.getElementById("facebook");
+btnFacebook.addEventListener("click",()=>{
+
+    authFacebook();
+
+})
+
+
 }
 

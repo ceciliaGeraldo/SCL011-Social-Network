@@ -1,36 +1,94 @@
 import {checkEmail} from '/assets/js/validation.js'
+import {initFeed} from '/assets/views/feed.js'
 
 //Crear usuario nuevo 
+
 export const createUser = (email,password) =>{
 
     firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(()=>{
-        checkEmail()})
+        checkEmail();
+
+        })
 .catch(function(error) {
     // Handle Errors here.
     
-    var errorCode = error.code;
-    var errorMessage = error.message;
+    let errorCode = error.code;
+    let errorMessage = error.message;
+    console.log(errorCode ); // errores que dicen que el email ya esta usado
+    console.log(errorMessage )
     // ...
   })
 }
-//Validacion de campos vacios 
+// mostrar error de usuario ya registrado
 
- export const validar2 = (email,password) => {
-  if( email == "" &&  password == ""  && name == ""  ){
-  return false
-  }
-  else{
-    return true 
-  }
+export const registeredEmail = () => {
+
 }
 
+// Acceso con usuario ya creado
 
+export const LogIn = (emailLogIn, passwordLogIn) =>{
 
+firebase.auth().signInWithEmailAndPassword(emailLogIn, passwordLogIn)
+.then(function(){
+
+  const user = firebase.auth().currentUser;
+  if(user.emailVerified===true){
+    console.log("iniciar sesión, datos válidos");
+    initFeed();
+  }else{
+    console.log("no ha validado su mail");
+  }
+  
+})
+
+.catch(function(error) {
+  // Handle Errors here.
+ 
+  let errorCode = error.code;
+  let errorMessage = error.message;
+
+  
+  
+  // ...
+})
+}
 //Configuracion de un observador  , verifica que si hay un cambio de usuario o alguien se registra y ejecuta los comandos
 
+export const observer = () => { 
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    console.log(user);
+    // User is signed in.
+    console.log(user);
+    
+    let displayName = user.displayName;
+    let email = user.email;
+    let emailVerified = user.emailVerified;
+    let photoURL = user.photoURL;
+    let isAnonymous = user.isAnonymous;
+    let uid = user.uid;
+    let providerData = user.providerData;
 
-// acceso con usuario ya creado
+    if(emailVerified === true){
+      console.log("Iniciada sesión");
+    }else{
+      console.log("El correo no está registrado o no ha sido verificado")
+    
+  }
+
+    // ...
+  } else {
+      console.log("no existe usuario");
+
+    // User is signed out.
+    // ...
+  }
+});   
+
+}
+
 
 
 //Create new user with Google
@@ -38,6 +96,7 @@ export const authGoogle = () => {
 
     const provider = new firebase.auth.GoogleAuthProvider();
     authentication(provider);
+    initFeed();
 }
 
 const authentication = (provider) => {
@@ -65,4 +124,20 @@ const authentication = (provider) => {
 
 //Create new user with Facebook
 
+export const authFacebook = () => {
 
+    const provider = new firebase.auth.FacebookAuthProvider();
+    authentication(provider);
+    initFeed();
+}
+
+export const signOutSession = () => {
+
+  firebase.auth().signOut()
+  .then(function(){
+    console.log("sesión cerrada")
+  })
+  .catch(function(error){
+    console.log(error);
+  })
+}

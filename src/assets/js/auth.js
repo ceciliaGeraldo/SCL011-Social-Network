@@ -1,4 +1,5 @@
 import {checkEmail} from '/assets/js/validation.js'
+import {initFeed} from '/assets/views/feed.js'
 
 //Crear usuario nuevo 
 
@@ -6,7 +7,10 @@ export const createUser = (email,password) =>{
 
     firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(()=>{
-        checkEmail()})
+        checkEmail();
+        initFeed();
+
+        })
 .catch(function(error) {
     // Handle Errors here.
     
@@ -16,6 +20,17 @@ export const createUser = (email,password) =>{
     console.log(errorMessage )
     // ...
   })
+}
+
+//Validacion de campos vacios 
+
+ export const validar2 = (email,password) => {
+  if( email == "" &&  password == ""  && name == ""  ){
+  return false;
+  }
+  else{
+    return true; 
+  }
 }
 
 // Acceso con usuario ya creado
@@ -89,5 +104,11 @@ const authentication = (provider) => {
 }
 
 //Create new user with Facebook
+
+export const authFacebook = () => {
+
+    const provider = new firebase.auth.FacebookAuthProvider();
+    authentication(provider);
+}
 
 

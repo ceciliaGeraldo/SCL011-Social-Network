@@ -1,58 +1,87 @@
-import { checkEmail } from '/assets/js/validation.js'
-import { initFeed } from '/assets/views/feed.js'
+import {checkEmail} from '/assets/js/validation.js'
+import {initFeed } from '/assets/views/feed.js'
+import { error1 } from '/assets/views/signUp.js';
+import {error2} from '/assets/views/logIn.js'
+
+
+
 
 //Crear usuario nuevo 
+export const createUser = (email,password) =>{
 
-export const createUser = (email, password) => {
 
   firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(() => {
       checkEmail();
+        })
+.catch(function(error) {
+    // Handle Errors here.
+    
+    let errorCode = error.code;
+    let errorMessage = error.message;
+   
+    error1(errorCode)
+    // if (errorCode == error.code){
+    //   alert("correo ya registrado")
+    // }}
+    console.log(errorCode); // errores que dicen que el email ya esta usado
+    console.log(errorMessage )
+    // ...
+  })
 
-    })
-    .catch(function (error) {
-      // Handle Errors here.
-
-      let errorCode = error.code;
-      let errorMessage = error.message;
-      console.log(errorCode); // errores que dicen que el email ya esta usado
-      console.log(errorMessage)
-      // ...
-    })
 }
 // mostrar error de usuario ya registrado
 
-export const registeredEmail = () => {
+export const registeredEmail = (errorCode) => {
+    if (errorCode == 'auth/email-already-in-use'){
+      //document.getElementById("root2").innerHTML= "ya usado"
+    //lert("ya usado")
+    return true 
+    }}
 
-}
 
 // Acceso con usuario ya creado
 
-export const LogIn = (emailLogIn, passwordLogIn) => {
+export const LogIn = (emailLogIn, passwordLogIn) =>{
 
-  firebase.auth().signInWithEmailAndPassword(emailLogIn, passwordLogIn)
-    .then(function () {
+firebase.auth().signInWithEmailAndPassword(emailLogIn, passwordLogIn)
+.then(function(){
 
-      const user = firebase.auth().currentUser;
-      if (user.emailVerified === true) {
-        console.log("iniciar sesión, datos válidos");
-        initFeed();
-      } else {
-        console.log("no ha validado su mail");
-      }
+  const user = firebase.auth().currentUser;
+  if(user.emailVerified===true){
+    console.log("iniciar sesión, datos válidos");
+    initFeed();
+  }else{
+    alert("no ha validado su mail");
+  }
+  
+})
 
-    })
+.catch(function(error) {
+  // Handle Errors here.
+ 
+  let errorCode = error.code;
+  let errorMessage = error.message;
 
-    .catch(function (error) {
-      // Handle Errors here.
+  console.log(errorCode);
+  console.log(errorMessage);
+  error2(errorCode)
+ 
 
-      let errorCode = error.code;
-      let errorMessage = error.message;
+  // if(errorCode == "auth/wrong-password"){
+  //   alert("Contraseña incorrecta")
+  // }
+  // else if (errorCode == "auth/user-not-found" ){
+  //   alert("Correo incorrecto o no registrado")
+  // }
+  //auth/wrong-password
+  //auth/user-not-found 
+  
 
-
-
-      // ...
-    })
+  
+  
+  // ...
+})
 }
 //Configuracion de un observador  , verifica que si hay un cambio de usuario o alguien se registra y ejecuta los comandos
 
@@ -131,6 +160,7 @@ export const authFacebook = () => {
   initFeed();
 }
 
+//Cerrar seción 
 export const signOutSession = () => {
 
   firebase.auth().signOut()

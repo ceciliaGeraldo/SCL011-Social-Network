@@ -15,7 +15,9 @@ export const templateLogIn = () => {
 
                     <button id="google">Google</button>
                     <button id="facebook">Facebook</button>
-                </div>
+                    <div> 
+                    <div id="errorContainerLogIn"></div>
+              
             </main>`
 document.getElementById("signUp").addEventListener('click',()=>{
     divContainer.innerHTML="";
@@ -51,3 +53,21 @@ btnFacebook.addEventListener("click",()=>{
 });
 
 }
+//verificaciones de correo y contraseña con usuario ya registrado
+export const error2 = (errorCode) =>{
+    if(errorCode == "auth/wrong-password" && errorCode == "auth/user-not-found" ){
+        document.getElementById("contenedor").innerHTML= "Clave y correo incorrectos"
+        
+      }
+      else if (errorCode == "auth/user-not-found" ){
+        document.getElementById("errorContainerLogIn").innerHTML="";
+        document.getElementById("errorContainerLogIn").innerHTML= "Correo incorrecto o no registrado"
+
+      }
+    else if(errorCode == "auth/wrong-password"){
+        document.getElementById("errorContainerLogIn").innerHTML="";
+        document.getElementById("errorContainerLogIn").innerHTML="Clave incorrecta" 
+    }
+    }
+    //alert("ya usado")
+    

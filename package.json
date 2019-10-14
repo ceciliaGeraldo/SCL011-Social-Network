@@ -23,7 +23,8 @@
   "author": "Camila Martínez, Fernanda Lennon, Constanza Castro, Cecilia Geraldo",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.6.3"
+    "@babel/core": "^7.6.3",
+    "jest": "^24.9.0"
   },
   "dependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
@@ -36,7 +37,6 @@
     "express": "^4.17.1",
     "firebase": "^7.1.0",
     "gh-pages": "^2.1.1",
-    "htmlhint": "^0.11.0",
-    "jest": "^24.9.0"
+    "htmlhint": "^0.11.0"
   }
 }

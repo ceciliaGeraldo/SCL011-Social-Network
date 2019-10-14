@@ -16,6 +16,7 @@ divContainer.innerHTML+=
                 <input type="email" id="email" placeholder="Ingrese correo" required="required" >
                 <div id="root2"></div>
                 <input type="password" id="password" placeholder="Ingrese contraseña">
+                <div id="printResultPassword"></div>
                 <button id="register">Registrarse</button>
                 <button id="google">Google</button>
                 <button id="facebook">Facebook</button>
@@ -27,30 +28,43 @@ send.addEventListener("click", () => {
 
 let email =document.getElementById("email").value;
 let password =document.getElementById("password").value;
+let name =document.getElementById("name").value;
 
 const divContainer2 = document.getElementById('root1');
 const divContainer3 = document.getElementById('root2');
+const divResultPassword = document.getElementById('printResultPassword');
+
+
+//Limpiar imputs
+document.getElementById('root1').innerHTML ="";
+document.getElementById('root2').innerHTML="";
+document.getElementById('printResultPassword').innerHTML="";
+
+
+
 
 let printValidation = valideImput(email,password,name)
 
 
 if(printValidation == true){
-    divContainer2.innerHTML += "llena los campos"
+    divContainer2.innerHTML = "Completa todo los campos"
 }
-else if(printValidation == false)
-{
-    divContainer2.innerHTML += "Todo listo"
-}
+
 
 let printValidationEmail = validEmail(email)
+
 if(printValidationEmail  ==true){
-    divContainer3.innerHTML += "Correo valido"
+    divContainer3.innerHTML = "Correo valido"
 }
 else {
-    divContainer3.innerHTML += "Correo invalido"
+    divContainer3.innerHTML = "Correo invalido"
 }
 
-validPassword(password)
+let printValidPassword =validPassword(password)
+if(printValidPassword ==true){
+    divResultPassword .innerHTML ="La contraseña debe tener como mínimo 6 carácteres"
+}
+
 createUser(email,password);
 })
 
@@ -75,4 +89,9 @@ btnFacebook.addEventListener("click",()=>{
 
 
 }
-
+// Vericar que el email ya ha sido verificado 
+export const error1 = (errorCode) =>{
+    if (errorCode == 'auth/email-already-in-use'){
+      document.getElementById("root2").innerHTML= "ya usado"
+    //alert("ya usado")
+    }}

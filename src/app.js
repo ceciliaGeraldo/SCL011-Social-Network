@@ -1,6 +1,7 @@
 
 import { initFirebase } from '/assets/js/initFirebase.js';
-import {templateSignUp} from '/assets/views/signUp.js';
+//import {templateSignUp} from '/assets/views/signUp.js';
+import { templateCSS } from './assets/views/logIn2.js';
 import {observer} from '/assets/js/auth.js'
 //import { templateCSS } from './assets/views/logIn2.js';
 
@@ -8,11 +9,14 @@ import {observer} from '/assets/js/auth.js'
 const init = () => {
 
     initFirebase();
+    templateCSS();
+    //templateSignUp();
     //templateCSS();
     observer();
-    templateSignUp();
-    observer()
+    //templateSignUp();
+    
 
 }
 
 window.addEventListener('load',init);
+

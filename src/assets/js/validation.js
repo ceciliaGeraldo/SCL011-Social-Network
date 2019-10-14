@@ -5,16 +5,19 @@ export const checkEmail = () =>{
     
     user.sendEmailVerification().then(function() {
       // Email sent.
+      alert("Enviando correo de verificacion al correo")
+      console.log("enviando correo");
+      
     }).catch(function(error) {
       // An error happened.
     });
     
 }
 
-//Validacion de campos vacios (sige sin funcionar correctamwnte)
+//Validacion de campos vacios 
 
 export const valideImput = (email,password,name) => {
-  if( email == "" || password == ""  || name == ""  ){
+  if( email == "" || password =="" || name == "" ){
   return true
   }
   else{
@@ -38,7 +41,7 @@ else {
 
 export const validPassword = (password)=> {
   if ( password.length<6 ){
-      alert("Tu contraseña tiene menos de 6 caracteres")
+      return true
 }
 else {
   return false
@@ -46,3 +49,5 @@ else {
 }
 
 //validar que el email no se repita
+
+//Vericar que los campos esten

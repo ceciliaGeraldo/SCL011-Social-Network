@@ -1,8 +1,11 @@
 import {checkEmail} from '/assets/js/validation.js'
-import {initFeed} from '/assets/views/feed.js'
+import {initFeed } from '/assets/views/feed.js'
+import { error1 } from '/assets/views/signUp.js';
+import {error2} from '/assets/views/logIn.js'
+
+
 
 //Crear usuario nuevo 
-
 export const createUser = (email,password) =>{
 
     firebase.auth().createUserWithEmailAndPassword(email, password)
@@ -15,16 +18,25 @@ export const createUser = (email,password) =>{
     
     let errorCode = error.code;
     let errorMessage = error.message;
-    console.log(errorCode ); // errores que dicen que el email ya esta usado
+   
+    error1(errorCode)
+    // if (errorCode == error.code){
+    //   alert("correo ya registrado")
+    // }}
+    console.log(errorCode); // errores que dicen que el email ya esta usado
     console.log(errorMessage )
     // ...
   })
 }
 // mostrar error de usuario ya registrado
 
-export const registeredEmail = () => {
+export const registeredEmail = (errorCode) => {
+    if (errorCode == 'auth/email-already-in-use'){
+      //document.getElementById("root2").innerHTML= "ya usado"
+    //lert("ya usado")
+    return true 
+    }}
 
-}
 
 // Acceso con usuario ya creado
 
@@ -38,7 +50,7 @@ firebase.auth().signInWithEmailAndPassword(emailLogIn, passwordLogIn)
     console.log("iniciar sesión, datos válidos");
     initFeed();
   }else{
-    console.log("no ha validado su mail");
+    alert("no ha validado su mail");
   }
   
 })
@@ -48,6 +60,21 @@ firebase.auth().signInWithEmailAndPassword(emailLogIn, passwordLogIn)
  
   let errorCode = error.code;
   let errorMessage = error.message;
+
+  console.log(errorCode);
+  console.log(errorMessage);
+  error2(errorCode)
+ 
+
+  // if(errorCode == "auth/wrong-password"){
+  //   alert("Contraseña incorrecta")
+  // }
+  // else if (errorCode == "auth/user-not-found" ){
+  //   alert("Correo incorrecto o no registrado")
+  // }
+  //auth/wrong-password
+  //auth/user-not-found 
+  
 
   
   
@@ -131,6 +158,7 @@ export const authFacebook = () => {
     initFeed();
 }
 
+//Cerrar seción 
 export const signOutSession = () => {
 
   firebase.auth().signOut()

@@ -11,8 +11,9 @@ const init = () => {
     //templateCSS();
     observer();
     templateSignUp();
-    observer()
+    
 
 }
 
 window.addEventListener('load',init);
+

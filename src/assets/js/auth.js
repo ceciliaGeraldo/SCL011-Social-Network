@@ -5,13 +5,14 @@ import {error2} from '/assets/views/logIn.js'
 
 
 
+
 //Crear usuario nuevo 
 export const createUser = (email,password) =>{
 
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-    .then(()=>{
-        checkEmail();
 
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+    .then(() => {
+      checkEmail();
         })
 .catch(function(error) {
     // Handle Errors here.
@@ -27,6 +28,7 @@ export const createUser = (email,password) =>{
     console.log(errorMessage )
     // ...
   })
+
 }
 // mostrar error de usuario ya registrado
 
@@ -83,36 +85,36 @@ firebase.auth().signInWithEmailAndPassword(emailLogIn, passwordLogIn)
 }
 //Configuracion de un observador  , verifica que si hay un cambio de usuario o alguien se registra y ejecuta los comandos
 
-export const observer = () => { 
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    console.log(user);
-    // User is signed in.
-    console.log(user);
-    
-    let displayName = user.displayName;
-    let email = user.email;
-    let emailVerified = user.emailVerified;
-    let photoURL = user.photoURL;
-    let isAnonymous = user.isAnonymous;
-    let uid = user.uid;
-    let providerData = user.providerData;
+export const observer = () => {
+  firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+      console.log(user);
+      // User is signed in.
+      console.log(user);
 
-    if(emailVerified === true){
-      console.log("Iniciada sesión");
-    }else{
-      console.log("El correo no está registrado o no ha sido verificado")
-    
-  }
+      let displayName = user.displayName;
+      let email = user.email;
+      let emailVerified = user.emailVerified;
+      let photoURL = user.photoURL;
+      let isAnonymous = user.isAnonymous;
+      let uid = user.uid;
+      let providerData = user.providerData;
 
-    // ...
-  } else {
+      if (emailVerified === true) {
+        console.log("Iniciada sesión");
+      } else {
+        console.log("El correo no está registrado o no ha sido verificado")
+
+      }
+
+      // ...
+    } else {
       console.log("no existe usuario");
 
-    // User is signed out.
-    // ...
-  }
-});   
+      // User is signed out.
+      // ...
+    }
+  });
 
 }
 
@@ -121,31 +123,31 @@ firebase.auth().onAuthStateChanged(function(user) {
 //Create new user with Google
 export const authGoogle = () => {
 
-    const provider = new firebase.auth.GoogleAuthProvider();
-    authentication(provider);
-    initFeed();
+  const provider = new firebase.auth.GoogleAuthProvider();
+  authentication(provider);
+  initFeed();
 }
 
 const authentication = (provider) => {
 
-    firebase.auth().signInWithPopup(provider).then((result) => {
+  firebase.auth().signInWithPopup(provider).then((result) => {
 
-        let token = result.credential.accessToken;
-        let user = result.user;
-    }).catch((error) => {
-        // Handle Errors here.
-        console.log(error);
-        const errorCode = error.code;
-        console.log(errorCode);
-        const errorMessage = error.message;
-        console.log(errorMessage);
-        // The email of the user's account used.
-        const email = error.email;
-        console.log(email);
-        // The firebase.auth.AuthCredential type that was used.
-        const credential = error.credential;
-        console.log(credential);
-    });
+    let token = result.credential.accessToken;
+    let user = result.user;
+  }).catch((error) => {
+    // Handle Errors here.
+    console.log(error);
+    const errorCode = error.code;
+    console.log(errorCode);
+    const errorMessage = error.message;
+    console.log(errorMessage);
+    // The email of the user's account used.
+    const email = error.email;
+    console.log(email);
+    // The firebase.auth.AuthCredential type that was used.
+    const credential = error.credential;
+    console.log(credential);
+  });
 
 }
 
@@ -153,19 +155,19 @@ const authentication = (provider) => {
 
 export const authFacebook = () => {
 
-    const provider = new firebase.auth.FacebookAuthProvider();
-    authentication(provider);
-    initFeed();
+  const provider = new firebase.auth.FacebookAuthProvider();
+  authentication(provider);
+  initFeed();
 }
 
 //Cerrar seción 
 export const signOutSession = () => {
 
   firebase.auth().signOut()
-  .then(function(){
-    console.log("sesión cerrada")
-  })
-  .catch(function(error){
-    console.log(error);
-  })
+    .then(function () {
+      console.log("sesión cerrada")
+    })
+    .catch(function (error) {
+      console.log(error);
+    })
 }

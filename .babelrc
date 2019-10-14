@@ -1,5 +1,9 @@
-{"plugins":
+{
+    
+     "presets": ["@babel/preset-env"]
+        ,
+    "plugins":
     [
-        "@babel/pluging-transforms-modules-commonjs"
+        "@babel/plugin-transform-modules-commonjs"
     ]
 }

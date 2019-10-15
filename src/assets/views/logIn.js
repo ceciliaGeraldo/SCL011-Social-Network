@@ -3,6 +3,7 @@ import { authGoogle, authFacebook, LogIn } from '/assets/js/auth.js'
 
 export const templateLogIn = () => {
     const divContainer = document.getElementById('root');
+    window.location.hash='/login'
     divContainer.innerHTML +=
         `<header>
             <div>
@@ -33,12 +34,12 @@ export const templateLogIn = () => {
                     <div id="errorContainerLogIn"></div>
               
             </main>`
-    document.getElementById("signUp").addEventListener('click', () => {
-        divContainer.innerHTML = "";
-        templateSignUp();
+    // document.getElementById("signUp").addEventListener('click', () => {
+    //     divContainer.innerHTML = "";
+    //     templateSignUp();
 
 
-    });
+    // });
 
     document.getElementById("registerHere").addEventListener('click', ()=>{
         divContainer.innerHTML="";

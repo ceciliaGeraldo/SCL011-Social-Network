@@ -1,10 +1,13 @@
+
 // test de validaciones
 import {validEmail , valideImput, validPassword} from '../src/assets/js/validation.js'
+
 
 describe("verdicar funcion de registro", () =>{
 it("Deberia retornar false para email incorrecto" ,()=>{
    expect(validEmail("martcamila1@gmail")).toBe(false)
 });
+
 it("Deberia retornar true para email correcto" ,()=>{
     expect(validEmail("martcamila1@laboratoria.com")).toBe(true)
  });
@@ -27,3 +30,7 @@ describe("Verificar funcion de contraseña con mas de 6 caracteres", () =>{
         expect(validPassword("contraseña")).toBe(false)
      });
 });
+
+
+ 
+

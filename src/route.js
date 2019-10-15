@@ -1,6 +1,9 @@
-/*import {templateLogin} from '/assets/js/views/logIn.js'
+import {templateLogIn} from './assets/views/logIn.js'
+import {templateSignUp} from './assets/views/signUp.js'
+import {templateSendingMail} from './assets/views/sendingEmail.js'
+import {initFeed} from './assets/views/feed.js'
 
-/* changeRouter llama a la función que carga cada template 
+/* changeRouter llama a la función que carga cada template */
 const changeRouter = (hash) => {
     if(hash === ''){
       return showTemplate('#/home');
@@ -14,11 +17,11 @@ const changeRouter = (hash) => {
       return showTemplate(hash);
     }
   
-    if (hash === '#/create') {
+    if (hash === '#/register') {
       return showTemplate(hash);
     }
   
-    if (hash === '#/profile') {
+    if (hash === '#/sendingmail') {
       return showTemplate(hash);
     }
   
@@ -26,10 +29,7 @@ const changeRouter = (hash) => {
       return showTemplate(hash);
     }
   
-    if (hash === '#/createEvent') {
-  
-      return showTemplate(hash);
-    }
+   
   
   }
   
@@ -42,29 +42,27 @@ const changeRouter = (hash) => {
     // hacemos el match del hash utilizado y el template que queremos mostrar
     switch (router) {
       case 'home':
-        containerRoot.appendChild(templateHome());
+        containerRoot.appendChild(templateLogIn());
       break;
       case 'login':
-        containerRoot.appendChild(templateLogin());
+        containerRoot.appendChild(templateLogIn());
       break;
-      case 'create':
-        containerRoot.appendChild(templateCreate());
+      case 'register':
+        containerRoot.appendChild(templateSignUp());
       break;
-      case 'profile':
-        containerRoot.appendChild(templateProfile());
+      case 'sengingmail':
+        containerRoot.appendChild(templateSendingMail());
       break;
       case 'feed':
-        containerRoot.appendChild(templateFeed());
+        containerRoot.appendChild(initFeed());
       break;
-      case 'createEvent':
-        containerRoot.appendChild(templateCreateEvent());
-      break;
+     
       default:
         containerRoot.innerHTML = `<p>Error 404</p>`
     }
   }
   
-  /* initRouter es la función que 'escucha' los cambios de hash 
+  /* initRouter es la función que 'escucha' los cambios de hash */
   export const initRouter = () => {
     window.addEventListener('load', changeRouter(window.location.hash));
   
@@ -75,4 +73,4 @@ const changeRouter = (hash) => {
       }
     }
   }
-  */
+  

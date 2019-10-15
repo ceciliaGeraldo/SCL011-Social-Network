@@ -27,14 +27,27 @@ p{
 /* === Tabs === */
 
 .login-tab{
+    
     font-size: 16px;
     margin-right: 15px;
     padding-bottom:5px;
     margin: 0 15px 10px 0;
-    display:inline-block;
-    border-bottom:2px solid transparent;
+    /*display:inline-block;*/
+    /*border-bottom:2px solid transparent;*/
+    
+    border: none;
+    background: none;
+   
 }
 
+.login-tab:hover{
+    border-bottom: 2px solid #7FCD0D;
+}
+#topNavSign{
+    display: flex;
+    justify-content: space-around;
+    font-size: 16px;
+}
 /* botones */
 
 .generic-btn{
@@ -61,6 +74,18 @@ p{
     background-color: #49A010;
 }
 
+.link-bold{
+
+    color: #AA6600;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#logInFooter{
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+}
 /* Inputs */
 
 input{
@@ -79,6 +104,14 @@ input{
 ::placeholder{
     color: #bfbfbf;
     padding-left: 8px;
+}
+/*Párrafos sendingEmail.js*/
+#font-22{
+    font-size: 22px;
+}
+#font-14{
+    font-size: 14px;
+    font-weight: bold;
 }
 
 @media (max-width:320px){

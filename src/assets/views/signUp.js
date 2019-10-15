@@ -3,23 +3,34 @@
 import { createUser , authGoogle, authFacebook } from '/assets/js/auth.js'
 import {templateLogIn} from '/assets/views/logIn.js'
 import {valideImput ,validEmail , validPassword} from '/assets/js/validation.js'
+import {templateSendingMail} from '/assets/views/sendingEmail.js'
 
 
 export const templateSignUp = () =>{    
 const divContainer = document.getElementById('root');
 divContainer.innerHTML+=
-        `<main>
+        ` 
+        <header>
             <div>
-                <button id="login">Login</button>
-                <button id="signUp">Sign Up</button>
+                <a href="#"><img src="/assets/images/cultivate-logo.png" alt="cultivate" class="logo"></a>
+            </div>
+        </header>
+        <main>
+            <div>
+            <div id="topNavSign">
+                <button class="login-tab" id="login">Login</button>
+                <button class="login-tab" id="signUp">Registrarse</button>
+            </div>
+                    <p>Regístrate y comparte información relacionada a tus cultivos.</p>
                 <input type="text" id="name" placeholder="Ingrese Nombre">
                 <input type="email" id="email" placeholder="Ingrese correo" required="required" >
                 <div id="root2"></div>
                 <input type="password" id="password" placeholder="Ingrese contraseña">
                 <div id="printResultPassword"></div>
-                <button id="register">Registrarse</button>
-                <button id="google">Google</button>
-                <button id="facebook">Facebook</button>
+                <button class="generic-btn" id="register">Registrarse</button>
+            </div>
+            <div id="logInFooter">
+            ¿Ya tienes cuenta? Inicia sesión <a href=""><span class="link-bold" id="logInHere">aquí</span></a>
             </div>
         </main>`
 
@@ -66,6 +77,8 @@ if(printValidPassword ==true){
 }
 
 createUser(email,password);
+templateSendingMail();
+
 })
 
 const logIn = document.getElementById("login");
@@ -74,19 +87,10 @@ logIn.addEventListener("click",()=>{
     templateLogIn();
 })
 
-const btnGoogle = document.getElementById("google");
-btnGoogle.addEventListener("click",()=>{
-
-    authGoogle();
-
+document.getElementById("logInHere").addEventListener('click', ()=>{
+    divContainer.innerHTML="";
+    templateLogIn();
 })
-const btnFacebook = document.getElementById("facebook");
-btnFacebook.addEventListener("click",()=>{
-
-    authFacebook();
-
-})
-
 
 }
 // Vericar que el email ya ha sido verificado 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1571091228243" clover="3.2.0">
-  <project timestamp="1571091228247" name="All files">
+<coverage generated="1571091584488" clover="3.2.0">
+  <project timestamp="1571091584488" name="All files">
     <metrics statements="18" coveredstatements="7" conditionals="9" coveredconditionals="1" methods="6" coveredmethods="1" elements="33" coveredelements="9" complexity="0" loc="18" ncloc="18" packages="1" files="1" classes="1"/>
     <file name="validation.js" path="C:\Users\redli\Desktop\Proyectos\SocialNetwork\SCL011-Social-Network\src\assets\js\validation.js">
       <metrics statements="18" coveredstatements="7" conditionals="9" coveredconditionals="1" methods="6" coveredmethods="1"/>

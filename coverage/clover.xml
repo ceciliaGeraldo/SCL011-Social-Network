@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1571168668503" clover="3.2.0">
+  <project timestamp="1571168668503" name="All files">
+    <metrics statements="18" coveredstatements="14" conditionals="9" coveredconditionals="9" methods="6" coveredmethods="3" elements="33" coveredelements="26" complexity="0" loc="18" ncloc="18" packages="1" files="1" classes="1"/>
+    <file name="validation.js" path="/home/cgeraldo/Desktop/laboratoria/projects/cultivateAPP/SCL011-Social-Network/src/assets/js/validation.js">
+      <metrics statements="18" coveredstatements="14" conditionals="9" coveredconditionals="9" methods="6" coveredmethods="3"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="4" count="0" type="stmt"/>
+      <line num="6" count="0" type="stmt"/>
+      <line num="8" count="0" type="stmt"/>
+      <line num="9" count="0" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="20" count="2" type="cond" truecount="5" falsecount="0"/>
+      <line num="21" count="1" type="stmt"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="31" count="2" type="stmt"/>
+      <line num="32" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="33" count="1" type="stmt"/>
+      <line num="36" count="1" type="stmt"/>
+      <line num="42" count="1" type="stmt"/>
+      <line num="43" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="44" count="1" type="stmt"/>
+      <line num="47" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

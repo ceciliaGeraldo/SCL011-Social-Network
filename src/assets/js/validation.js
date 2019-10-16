@@ -1,3 +1,4 @@
+import {templateSendingMail} from '/assets/views/sendingEmail.js'
 //Enviar mensaje de verificación al usuario
 export const checkEmail = () =>{
 
@@ -5,8 +6,9 @@ export const checkEmail = () =>{
     
     user.sendEmailVerification().then(function() {
       // Email sent.
-      alert("Enviando correo de verificacion al correo")
+      
       console.log("enviando correo");
+      templateSendingMail();
       
     }).catch(function(error) {
       // An error happened.
@@ -49,5 +51,15 @@ else {
 }
 
 //validar que el email no se repita
+
+export const validRepeatPassword = (password, repeatPassword) => {
+  if (password == repeatPassword){
+    return true
+  }
+  else {
+    return false
+  }
+}
+
 
 //Vericar que los campos esten

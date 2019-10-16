@@ -2,8 +2,9 @@
 //Vista de registros
 import { createUser , authGoogle, authFacebook } from '/assets/js/auth.js'
 import {templateLogIn} from '/assets/views/logIn.js'
-import {valideImput ,validEmail , validPassword} from '/assets/js/validation.js'
+import {valideImput ,validEmail , validPassword, validRepeatPassword} from '/assets/js/validation.js'
 import {templateSendingMail} from '/assets/views/sendingEmail.js'
+//import { validPassword } from '../js/validation'
 
 
 export const templateSignUp = () =>{    
@@ -28,6 +29,10 @@ divContainer.innerHTML+=
                 <input type="password" id="password" placeholder="Ingrese contraseña">
                 <input type="repeatPassword" id="repeatPassword" placeholder="Ingrese nuevamente su contraseña">
                 <div id="printResultPassword"></div>
+
+                <input type="password" id="repeatPassword" placeholder="Repita contraseña">
+                <div id="printResultRepeatPassword"></div>
+
                 <button class="generic-btn" id="register">Registrarse</button>
             </div>
             <div id="logInFooter">
@@ -40,11 +45,13 @@ send.addEventListener("click", () => {
 
 let email =document.getElementById("email").value;
 let password =document.getElementById("password").value;
+let repeatPassword =document.getElementById("repeatPassword").value;
 let name =document.getElementById("name").value;
 
 const divContainer2 = document.getElementById('root1');
 const divContainer3 = document.getElementById('root2');
 const divResultPassword = document.getElementById('printResultPassword');
+const divResultRepeatPassword = document.getElementById('printResultRepeatPassword');
 
 
 //Limpiar imputs
@@ -77,7 +84,16 @@ if(printValidPassword ==true){
     divResultPassword .innerHTML ="La contraseña debe tener como mínimo 6 carácteres"
 }
 
-createUser(email,password);
+let printValidRepeatPassword = validRepeatPassword(password, repeatPassword);
+if(printValidRepeatPassword==false){
+    divResultRepeatPassword.innerHTML="Las contraseñas no coinciden"
+    console.log(printValidRepeatPassword)
+}else {
+    createUser(email,password);
+}
+
+
+//createUser(email,password);
 //templateSendingMail();
 
 })

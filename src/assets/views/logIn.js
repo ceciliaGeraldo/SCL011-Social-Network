@@ -34,12 +34,12 @@ export const templateLogIn = () => {
                     <div id="errorContainerLogIn"></div>
               
             </main>`
-    // document.getElementById("signUp").addEventListener('click', () => {
-    //     divContainer.innerHTML = "";
-    //     templateSignUp();
+    document.getElementById("signUp").addEventListener('click', () => {
+       divContainer.innerHTML = "";
+       templateSignUp();
 
 
-    // });
+    });
 
     document.getElementById("registerHere").addEventListener('click', ()=>{
         divContainer.innerHTML="";

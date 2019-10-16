@@ -3,7 +3,6 @@ import { authGoogle, authFacebook, LogIn } from '/assets/js/auth.js'
 
 export const templateLogIn = () => {
     const divContainer = document.getElementById('root');
-    window.location.hash='/login'
     divContainer.innerHTML +=
         `<header>
             <div>

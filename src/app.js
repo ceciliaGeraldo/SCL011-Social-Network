@@ -10,10 +10,10 @@ import { initRouter } from './route.js';
 const init = () => {
 
     initFirebase();
-    //templateCSS();
     observer();
+    //templateCSS();
+
     initRouter();
-    
     //templateSignUp();
     
 

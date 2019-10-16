@@ -27,6 +27,7 @@ divContainer.innerHTML+=
                 <input type="email" id="email" placeholder="Ingrese correo" required="required" >
                 <div id="root2"></div>
                 <input type="password" id="password" placeholder="Ingrese contraseña">
+                <input type="repeatPassword" id="repeatPassword" placeholder="Ingrese nuevamente su contraseña">
                 <div id="printResultPassword"></div>
 
                 <input type="password" id="repeatPassword" placeholder="Repita contraseña">

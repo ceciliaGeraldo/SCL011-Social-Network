@@ -34,8 +34,9 @@ export const templateLogIn = () => {
               
             </main>`
     document.getElementById("signUp").addEventListener('click', () => {
-        divContainer.innerHTML = "";
-        templateSignUp();
+       divContainer.innerHTML = "";
+       templateSignUp();
+
 
 
     });

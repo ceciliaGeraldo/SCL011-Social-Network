@@ -15,3 +15,10 @@ export const initFirebase = () => {
     firebase.analytics();
 }
 
+// firebase.initializeApp({
+//     apiKey: "AIzaSyCQO4IsccRRtXeskhNL0TsaxPxzy83K8EA",
+//     authDomain: "cultivate-rrss.firebaseapp.com",
+//     projectId: "cultivate-rrss",
+//   });
+  
+//   var db = firebase.firestore();

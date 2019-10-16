@@ -30,7 +30,7 @@ divContainer.innerHTML+=
                 <button class="generic-btn" id="register">Registrarse</button>
             </div>
             <div id="logInFooter">
-            ¿Ya tienes cuenta? Inicia sesión <a href=""><span class="link-bold" id="logInHere">aquí</span></a>
+            ¿Ya tienes cuenta? Inicia sesión <a ><span class="link-bold" id="logInHere">aquí</span></a>
             </div>
         </main>`
 
@@ -77,7 +77,7 @@ if(printValidPassword ==true){
 }
 
 createUser(email,password);
-templateSendingMail();
+//templateSendingMail();
 
 })
 

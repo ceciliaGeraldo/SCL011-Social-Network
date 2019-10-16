@@ -125,7 +125,6 @@ export const authGoogle = () => {
 
   const provider = new firebase.auth.GoogleAuthProvider();
   authentication(provider);
-  initFeed();
 }
 
 const authentication = (provider) => {
@@ -157,7 +156,6 @@ export const authFacebook = () => {
 
   const provider = new firebase.auth.FacebookAuthProvider();
   authentication(provider);
-  initFeed();
 }
 
 //Cerrar seción 

@@ -27,6 +27,7 @@ divContainer.innerHTML+=
                 <div id="root2"></div>
                 <input type="password" id="password" placeholder="Ingrese contraseña">
                 <div id="printResultPassword"></div>
+                
                 <button class="generic-btn" id="register">Registrarse</button>
             </div>
             <div id="logInFooter">

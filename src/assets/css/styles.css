@@ -40,7 +40,7 @@ p{
    
 }
 
-.login-tab:hover{
+.login-tab:active{
     border-bottom: 2px solid #7FCD0D;
 }
 #topNavSign{

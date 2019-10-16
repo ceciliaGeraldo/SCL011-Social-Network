@@ -36,7 +36,9 @@ divContainer.innerHTML+=
                 <button class="generic-btn" id="register">Registrarse</button>
             </div>
             <div id="logInFooter">
-            ¿Ya tienes cuenta? Inicia sesión <a><span class="link-bold" id="logInHere">aquí</span></a>
+
+            ¿Ya tienes cuenta? Inicia sesión <a ><span class="link-bold" id="logInHere">aquí</span></a>
+
             </div>
         </main>`
 
@@ -84,6 +86,7 @@ if(printValidPassword ==true){
     divResultPassword .innerHTML ="La contraseña debe tener como mínimo 6 carácteres"
 }
 
+
 let printValidRepeatPassword = validRepeatPassword(password, repeatPassword);
 if(printValidRepeatPassword==false){
     divResultRepeatPassword.innerHTML="Las contraseñas no coinciden"
@@ -92,9 +95,6 @@ if(printValidRepeatPassword==false){
     createUser(email,password);
 }
 
-
-//createUser(email,password);
-//templateSendingMail();
 
 })
 

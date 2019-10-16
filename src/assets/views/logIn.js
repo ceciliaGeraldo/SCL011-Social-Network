@@ -1,12 +1,13 @@
 import { templateSignUp } from '/assets/views/signUp.js'
 import { authGoogle, authFacebook, LogIn } from '/assets/js/auth.js'
+import {templateForgotPassword} from '/assets/views/forgotPassword.js'
 
 export const templateLogIn = () => {
     const divContainer = document.getElementById('root');
     divContainer.innerHTML +=
         `<header>
             <div>
-                <a href="#"><img src="/assets/images/cultivate-logo.png" alt="cultivate" class="logo"></a>
+                <a href=""><img src="/assets/images/cultivate-logo.png" alt="cultivate" class="logo"></a>
             </div>
         </header>
         <main>
@@ -19,12 +20,12 @@ export const templateLogIn = () => {
                     <p>Regístrate y comparte información relacionada a tus cultivos.</p>
                     <button  class="generic-btn" id="google">Iniciar sesión con Google</button>
                     <button  class="generic-btn" id="facebook">Iniciar sesión con Facebook</button>
-                    <p>o</p>
+                    
                     <input type="email" id="emailLogIn" placeholder="Correo electrónico">
                     <input type="password" id="passwordLogIn" placeholder="Contraseña">
                     <button class="generic-btn" id="GoHome">Ingresar</button>
                     
-                    <a href=""><p class="link-bold">¿Olvidaste tu contraseña?</p></a>
+                    <a><p id="ifForgotPassword" class="link-bold">¿Olvidaste tu contraseña?</p></a>
                     
             <div> 
             <div id="logInFooter">
@@ -40,7 +41,11 @@ export const templateLogIn = () => {
 
 
     });
+    document.getElementById("ifForgotPassword").addEventListener('click', ()=>{
 
+        divContainer.innerHTML="";
+        templateForgotPassword();
+    })
     document.getElementById("registerHere").addEventListener('click', ()=>{
         divContainer.innerHTML="";
         templateSignUp();

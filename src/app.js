@@ -11,8 +11,9 @@ const init = () => {
 
     initFirebase();
     //templateCSS();
-    initRouter();
     observer();
+    initRouter();
+    
     //templateSignUp();
     
 

@@ -3,17 +3,18 @@ import { authGoogle, authFacebook, LogIn } from '/assets/js/auth.js'
 import {templateForgotPassword} from '/assets/views/forgotPassword.js'
 
 export const templateLogIn = () => {
-    const divContainer = document.getElementById('root');
-    divContainer.innerHTML +=
+    const divContainer = document.createElement("div");
+    const logInContainer=
         `<header>
             <div>
-                <a href=""><img src="/assets/images/cultivate-logo.png" alt="cultivate" class="logo"></a>
+                <a href="#/home"><img src="/assets/images/cultivate-logo.png" alt="cultivate" class="logo"></a>
             </div>
         </header>
         <main>
             <div id="logInContainer">
                 <div id="topNavSign">
-                    <button class="login-tab" id="login">Login</button>
+                
+                    <a href="#/login"><button class="login-tab" id="login">Login</button></a>
                     <button class="login-tab" id="signUp">Registrarse</button>
                 </div>
                     
@@ -25,7 +26,7 @@ export const templateLogIn = () => {
                     <input type="password" id="passwordLogIn" placeholder="Contraseña">
                     <button class="generic-btn" id="GoHome">Ingresar</button>
                     
-                    <a><p id="ifForgotPassword" class="link-bold">¿Olvidaste tu contraseña?</p></a>
+                    <a href="#/forgotpassword"><p id="ifForgotPassword" class="link-bold">¿Olvidaste tu contraseña?</p></a>
                     
             <div> 
             <div id="logInFooter">
@@ -34,6 +35,8 @@ export const templateLogIn = () => {
                     <div id="errorContainerLogIn"></div>
               
             </main>`
+    divContainer.innerHTML=logInContainer;
+    return divContainer;
     document.getElementById("signUp").addEventListener('click', () => {
        divContainer.innerHTML = "";
        templateSignUp();
@@ -44,11 +47,11 @@ export const templateLogIn = () => {
     document.getElementById("ifForgotPassword").addEventListener('click', ()=>{
 
         divContainer.innerHTML="";
-        templateForgotPassword();
+        //templateForgotPassword();
     })
     document.getElementById("registerHere").addEventListener('click', ()=>{
         divContainer.innerHTML="";
-        templateSignUp();
+        //templateSignUp();
     })
     document.getElementById("GoHome").addEventListener('click', () => {
         let emailLogIn = document.getElementById("emailLogIn").value;

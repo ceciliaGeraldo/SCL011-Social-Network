@@ -5,14 +5,14 @@ export const initFirebase = () => {
         authDomain: "cultivate-rrss.firebaseapp.com",
         databaseURL: "https://cultivate-rrss.firebaseio.com",
         projectId: "cultivate-rrss",
-        storageBucket: "",
+        storageBucket: "https://cultivate-rrss.appspot.com",
         messagingSenderId: "711064674513",
         appId: "1:711064674513:web:fd4e204a0569bf165a65f0",
         measurementId: "G-HCVN6YHPYG"
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
+    //firebase.analytics();
 }
 
 // firebase.initializeApp({

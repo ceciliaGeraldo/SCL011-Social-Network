@@ -1,6 +1,14 @@
 // Crear post 
+import {imprimir} from '/assets/views/feed.js'
+
+
 export const createPost = ()=>{
+    
+let db = firebase.firestore(); 
+
 db.collection("users").add({
+    text :document.getElementById("textareaPost").value, 
+    date: new Date(),
     
 })
 .then(function(docRef) {
@@ -11,10 +19,29 @@ db.collection("users").add({
 });
 }
 
-//Para leer Post
+// .onSnapshot Para imprimir los post en tiempo "real" en pantalla
+// QuerySnapshot  contiene los resultados de una consulta
 
-db.collection("users").get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data()}`);
+
+
+//let container = document.getElementById("root");
+export let printResultPost = () =>{
+  let db = firebase.firestore(); 
+  db.collection("users").onSnapshot((querySnapshot) => {
+  //document.getElementById("root").innerHTML = "";
+  document.getElementById("rootPost").innerHTML = ""
+    querySnapshot.docs.forEach((doc) => {
+    console.log(doc);
+    
+        imprimir(doc)
+    
+      
     });
-});
+
+   
+    
+
+  });
+  }
+
+

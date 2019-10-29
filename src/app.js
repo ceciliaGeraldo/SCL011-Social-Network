@@ -4,6 +4,7 @@ import { initFirebase } from '/assets/js/initFirebase.js';
 //import { templateCSS } from './assets/views/logIn2.js';
 import {observer} from '/assets/js/auth.js'
 import { initRouter } from './route.js';
+
 //import { templateCSS } from './assets/views/logIn2.js';
 
 //Inicializamos Firebase y el observador
@@ -20,4 +21,5 @@ const init = () => {
 }
 
 window.addEventListener('load',init);
+
 

@@ -1,24 +1,18 @@
 export const initFirebase = () => {
     // Your web app's Firebase configuration
     let firebaseConfig = {
-        apiKey: "AIzaSyCQO4IsccRRtXeskhNL0TsaxPxzy83K8EA",
-        authDomain: "cultivate-rrss.firebaseapp.com",
-        databaseURL: "https://cultivate-rrss.firebaseio.com",
-        projectId: "cultivate-rrss",
-        storageBucket: "https://cultivate-rrss.appspot.com",
-        messagingSenderId: "711064674513",
-        appId: "1:711064674513:web:fd4e204a0569bf165a65f0",
-        measurementId: "G-HCVN6YHPYG"
-    };
+        
+            apiKey: "AIzaSyDj0zwajsMuP1jQEs-PNakxaqzR3WWbRzI",
+            authDomain: "camila-61ade.firebaseapp.com",
+            databaseURL: "https://camila-61ade.firebaseio.com",
+            projectId: "camila-61ade",
+            storageBucket: "camila-61ade.appspot.com",
+            messagingSenderId: "1026022199725",
+            appId: "1:1026022199725:web:d28cda99bed24cc42fd124",
+            measurementId: "G-3X36YKX459"
+        }
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-    //firebase.analytics();
-}
+    firebase.analytics();
 
-// firebase.initializeApp({
-//     apiKey: "AIzaSyCQO4IsccRRtXeskhNL0TsaxPxzy83K8EA",
-//     authDomain: "cultivate-rrss.firebaseapp.com",
-//     projectId: "cultivate-rrss",
-//   });
-  
-//   var db = firebase.firestore();
+}

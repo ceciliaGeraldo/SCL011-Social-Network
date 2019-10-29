@@ -6,7 +6,7 @@ import {valideImput ,validEmail , validPassword, validRepeatPassword} from '/ass
 import {templateSendingMail} from '/assets/views/sendingEmail.js'
 //import { validPassword } from '../js/validation'
 
-
+// View SignUp
 export const templateSignUp = () =>{    
 const divContainer = document.getElementById('root');
 divContainer.innerHTML+=
@@ -62,7 +62,7 @@ document.getElementById('printResultPassword').innerHTML="";
 
 
 
-
+//Asigar error en caso que no complete todos los inputs
 let printValidation = valideImput(email,password,name)
 
 
@@ -70,6 +70,7 @@ if(printValidation == true){
     divContainer2.innerHTML = "Completa todo los campos"
 }
 
+//Asignar error en caso de correo invalido
 
 let printValidationEmail = validEmail(email)
 
@@ -80,12 +81,14 @@ else {
     divContainer3.innerHTML = "Correo invalido"
 }
 
+//Asignar error en caso de contraseña de menos de 6 caracteres
+
 let printValidPassword =validPassword(password)
 if(printValidPassword ==true){
     divResultPassword .innerHTML ="La contraseña debe tener como mínimo 6 carácteres"
 }
 
-
+//Asignar error en caso de contraseñas diferentes
 let printValidRepeatPassword = validRepeatPassword(password, repeatPassword);
 if(printValidRepeatPassword==false){
     divResultRepeatPassword.innerHTML="Las contraseñas no coinciden"
@@ -109,9 +112,10 @@ document.getElementById("logInHere").addEventListener('click', ()=>{
 })
 
 }
+
 // Vericar que el email ya ha sido verificado 
 export const error1 = (errorCode) =>{
     if (errorCode == 'auth/email-already-in-use'){
-      document.getElementById("root2").innerHTML= "ya usado"
+      document.getElementById("root2").innerHTML= "Email ingresado ya fue registrado"
     //alert("ya usado")
     }}

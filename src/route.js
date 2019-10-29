@@ -2,6 +2,7 @@ import {templateLogIn} from './assets/views/logIn.js'
 import {templateSignUp} from './assets/views/signUp.js'
 import {templateSendingMail} from './assets/views/sendingEmail.js'
 import {initFeed} from './assets/views/feed.js'
+import {templateForgotPassword} from './assets/views/forgotPassword.js'
 
 /* changeRouter llama a la función que carga cada template */
 const changeRouter = (hash) => {
@@ -22,6 +23,9 @@ const changeRouter = (hash) => {
     }
   
     if (hash === '#/sendingmail') {
+      return showTemplate(hash);
+    }
+    if(hash === '#/forgotpassword'){
       return showTemplate(hash);
     }
   
@@ -53,6 +57,9 @@ const changeRouter = (hash) => {
       case 'sengingmail':
         containerRoot.appendChild(templateSendingMail());
       break;
+      case 'forgotpassword':
+        containerRoot.appendChild(templateForgotPassword());
+        break;
       case 'feed':
         containerRoot.appendChild(initFeed());
       break;
@@ -72,5 +79,6 @@ const changeRouter = (hash) => {
         changeRouter(window.location.hash);
       }
     }
+    
   }
   

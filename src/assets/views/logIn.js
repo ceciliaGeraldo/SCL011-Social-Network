@@ -7,7 +7,7 @@ export const templateLogIn = () => {
     divContainer.innerHTML +=
         `<header>
             <div>
-                <a href=""><img src="/assets/images/cultivate-logo.png" alt="cultivate" class="logo"></a>
+                <a href="#/home"><img src="/assets/images/cultivate-logo.png" alt="cultivate" class="logo"></a>
             </div>
         </header>
         <main>

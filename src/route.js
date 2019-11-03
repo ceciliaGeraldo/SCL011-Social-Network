@@ -3,6 +3,7 @@ import {templateSignUp} from './assets/views/signUp.js'
 import {templateSendingMail} from './assets/views/sendingEmail.js'
 import {initFeed} from './assets/views/feed.js'
 import {templateForgotPassword} from './assets/views/forgotPassword.js'
+import {templateHome} from './assets/views/home.js'
 
 /* changeRouter llama a la función que carga cada template */
 const changeRouter = (hash) => {
@@ -46,7 +47,7 @@ const changeRouter = (hash) => {
     // hacemos el match del hash utilizado y el template que queremos mostrar
     switch (router) {
       case 'home':
-        containerRoot.appendChild(templateLogIn());
+        containerRoot.appendChild(templateHome());
       break;
       case 'login':
         containerRoot.appendChild(templateLogIn());

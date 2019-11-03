@@ -20,8 +20,13 @@ p{
 /* === LogIn === */
 
 .logo{
-    width: 70%;
+    width: 30%;
     margin: 40px;
+}
+
+.banner{
+    width: 100%;
+    
 }
 
 /* === Tabs === */
@@ -43,11 +48,25 @@ p{
 .login-tab:active{
     border-bottom: 2px solid #7FCD0D;
 }
+
+.btn-nav{
+    background: none;
+    border: 2px solid #996600;
+    border-radius: 3px;
+    color: #996600;
+    font-weight: bold;
+    margin: 60px 20px;
+    width: 15%;
+}
 #topNavSign{
     display: flex;
     justify-content: space-around;
     font-size: 16px;
 }
+#topNavHome{
+    display: flex;
+    background-color: #FFFFFF;
+    }
 /* botones */
 
 .generic-btn{

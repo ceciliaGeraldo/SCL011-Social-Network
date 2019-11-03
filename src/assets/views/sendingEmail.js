@@ -1,3 +1,5 @@
+import {templateLogIn} from './logIn.js'
+
 export const templateSendingMail = () => {
     const divContainer = document.getElementById('root');
     divContainer.innerHTML="";
@@ -21,7 +23,7 @@ export const templateSendingMail = () => {
             </main>`
     document.getElementById("goBack").addEventListener('click', () => {
        
-        window.history.back();
+        templateLogIn();
 
 
     });

@@ -8,11 +8,20 @@ En Cultiva-te encontrarás todo lo que necesitas para tus cultivos, desde inform
 En la actualidad debido a los avances de la tecnología y la evolución de la sociedad, nos vemos inmersos en un mundo totalmente digital. Y con ello han llegado las redes sociales dominando el mercado de la comunicación a tal nivel, que muchos hemos hecho un hábito el interactuar con nuestro entorno a través de ellas, entre las más conocidas: Instagram, Facebook, Snapchat, Twiter, Pinterest. 
 Hay para todos los gustos e intereses, como también para todas las edades. Es por esto que hemos tomado como alternativa, crear nuestra comunidad a base de su propia red social.
 
+## Nuestro Enfoque
+
+## Encuestas - Análisis
+
+Hemos realizado esta encuesta a un segmento de 64 personas, con el objetivo de conocer y poder crear el perfil de nuestro usuario, como también para saber sus necesidades y poder apuntar a complementarlas en nuestro desarrollo.
+
+A continuación veremos las preguntas aplicadas y su posterior análisis.
+
 ## Nuestro Usuario
 Cultivapp es una aplicación web dirigida a personas mayores de edad con intereses sobre **horticultura**.
 >_**Horticultura**:  La horticultura se puede definir como “el arte y la ciencia de cultivar las plantas”, o “el estudio del desarrollo, manejo, distribución y utilización de los cultivos hortícolas”._
 
 ***
+
 
 # Creando una Red Social
 

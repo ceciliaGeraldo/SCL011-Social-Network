@@ -1,7 +1,7 @@
 import {checkEmail} from '/assets/js/validation.js'
 import {initFeed } from '/assets/views/feed.js'
 import { error1 } from '/assets/views/signUp.js';
-import {error2} from '/assets/views/logIn.js'
+import {templateLogIn, error2} from '/assets/views/logIn.js'
 
 // coleccion de prueba para tomar usuario
 //que no pueda escribir un post vacio
@@ -9,22 +9,17 @@ import {error2} from '/assets/views/logIn.js'
 
 
 //Crear usuario nuevo 
-export const createUser = (email,password ,displayName) =>{
+
+export const createUser = (email,password, name) =>{
 
 
-  firebase.auth().createUserWithEmailAndPassword(email, password )
-    .then(() => {
-      checkEmail();
-     let db = firebase.firestore();
-     db.collection("nuevo").add({
-     displayName,
-        
-    })
-    
-  })
-   
-      
-       
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+    .then(function(result)
+    { checkEmail();
+      return result.user.updateProfile({
+      displayName: name
+      //checkEmail();
+        })
 .catch(function(error) {
     // Handle Errors here.
     
@@ -40,7 +35,12 @@ export const createUser = (email,password ,displayName) =>{
     // ...
   })
 
+})
+
 }
+
+
+
 // mostrar error de usuario ya registrado
 
 export const registeredEmail = (errorCode) => {
@@ -64,6 +64,7 @@ firebase.auth().signInWithEmailAndPassword(emailLogIn, passwordLogIn)
     initFeed();
   }else{
     alert("no ha validado su mail");
+    templateLogIn();
   }
   
 })

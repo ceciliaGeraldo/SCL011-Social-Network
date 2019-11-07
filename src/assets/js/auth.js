@@ -3,10 +3,13 @@ import {initFeed } from '/assets/views/feed.js'
 import { error1 } from '/assets/views/signUp.js';
 import {templateLogIn, error2} from '/assets/views/logIn.js'
 
+// coleccion de prueba para tomar usuario
+//que no pueda escribir un post vacio
 
 
 
 //Crear usuario nuevo 
+
 export const createUser = (email,password, name) =>{
 
 
@@ -99,9 +102,10 @@ export const observer = () => {
     if (user) {
       console.log(user);
       // User is signed in.
-      console.log(user);
-
+     
       let displayName = user.displayName;
+      console.log(displayName );
+      
       let email = user.email;
       let emailVerified = user.emailVerified;
       let photoURL = user.photoURL;

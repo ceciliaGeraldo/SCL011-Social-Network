@@ -8,6 +8,7 @@ let db = firebase.firestore();
 
 db.collection("users").add({
     uId: firebase.auth().currentUser.email,
+    userName: firebase.auth().currentUser.displayName,
     text :document.getElementById("textareaPost").value, 
     date: new Date(),
     

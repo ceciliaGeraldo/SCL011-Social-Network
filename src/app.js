@@ -15,7 +15,7 @@ const init = () => {
     //templateCSS();
 
     initRouter();
-    templateSignUp();
+   // templateSignUp();
     
 
 }

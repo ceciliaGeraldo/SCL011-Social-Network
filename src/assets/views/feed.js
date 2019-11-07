@@ -42,6 +42,7 @@ export let imprimir = (doc)=>{
     document.getElementById("rootPost").innerHTML += `
     <p>${doc.data().text}</p>
     <p>${doc.data().uId}</p>
+    <p>${doc.data().userName}</p>
     <button id="signOut">Eliminar Post</button>
     `
 }

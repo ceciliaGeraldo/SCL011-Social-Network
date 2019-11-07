@@ -94,7 +94,7 @@ if(printValidRepeatPassword==false){
     divResultRepeatPassword.innerHTML="Las contraseñas no coinciden"
     console.log(printValidRepeatPassword)
 }else {
-    createUser(email,password);
+    createUser(email,password,name);
 }
 
 

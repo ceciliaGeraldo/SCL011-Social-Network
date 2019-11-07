@@ -47,7 +47,10 @@ send.addEventListener("click", () => {
 let email =document.getElementById("email").value;
 let password =document.getElementById("password").value;
 let repeatPassword =document.getElementById("repeatPassword").value;
-let name =document.getElementById("name").value;
+let displayName =document.getElementById("name").value;
+
+
+
 
 const divContainer2 = document.getElementById('root1');
 const divContainer3 = document.getElementById('root2');
@@ -62,8 +65,8 @@ document.getElementById('printResultPassword').innerHTML="";
 
 
 
-//Asigar error en caso que no complete todos los inputs
-let printValidation = valideImput(email,password,name)
+//Asignar error en caso que no complete todos los inputs
+let printValidation = valideImput(email,password,displayName)
 
 
 if(printValidation == true){

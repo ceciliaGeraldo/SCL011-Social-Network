@@ -16,6 +16,8 @@ export const initFeed = () => {
                     <div id="rootPost"></div>
                 </div>
             </main>`
+
+            printResultPost()
 // Para crear Post
 //let textPost = document.getElementById("textareaPost"); 
            
@@ -39,6 +41,7 @@ export let imprimir = (doc)=>{
  
     document.getElementById("rootPost").innerHTML += `
     <p>${doc.data().text}</p>
+    <p>${doc.data().uId}</p>
     <button id="signOut">Eliminar Post</button>
     `
 }

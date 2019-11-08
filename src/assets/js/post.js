@@ -10,8 +10,7 @@ db.collection("users").add({
     uId: firebase.auth().currentUser.email,
     userName: firebase.auth().currentUser.displayName,
     text :document.getElementById("textareaPost").value, 
-    date: new Date(),
-    
+    date: new Date(),  
 })
 .then(function(docRef) {
     console.log("Document written with ID: ", docRef.id);
@@ -46,6 +45,18 @@ export let printResultPost = () =>{
       //   `
     });
   });
+
   }
+
+// Borrar post
+
+export function deletePost(id){
+    let db = firebase.firestore(); 
+        db.collection("users").doc(id).delete().then(function() {
+                console.log("Document successfully deleted!");
+        }).catch(function(error) {
+                console.error("Error removing document: ", error);
+        });
+}
 
 

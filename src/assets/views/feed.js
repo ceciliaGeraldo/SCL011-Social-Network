@@ -1,5 +1,5 @@
 import {signOutSession} from '/assets/js/auth.js'
-import {createPost ,printResultPost } from '/assets/js/post.js'
+import {createPost ,printResultPost, deletePost } from '/assets/js/post.js'
 
 export const initFeed = () => {
     const divContainer = document.getElementById('root');
@@ -47,6 +47,7 @@ signOut.addEventListener("click", ()=>{
 export let imprimir = (doc)=>{
  
     document.getElementById("rootPost").innerHTML += `
+
     <div id="printPost">
         <p>${doc.data().userName}</p>
         <p>${doc.data().text}</p>
@@ -54,6 +55,20 @@ export let imprimir = (doc)=>{
         
     </div>
     <button id="signOut">Eliminar Post</button>
+
     `
+    // Borrar post
+    
+    let deleteBtnId = doc.id;
+    
+    let deletePostBtn = document.getElementById("deleteBtn");
+    deletePostBtn.addEventListener("click", ()=>{
+            deletePost(deleteBtnId)
+    })
+
 }
+
+
+
+
 

@@ -114,6 +114,41 @@ input{
     font-weight: bold;
 }
 
+/*Inicio feed
+#containerPost{
+}*/
+
+.logofeed{
+    width: 60px;
+    width: 170px;
+    margin: 30px;
+}
+#textareaPost{
+    font-size: 14px;  
+    width: 400px;
+    height: 80px;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-color: #7FCD0D;
+
+}
+
+#post{
+    background-color: #7FCD0D;
+    width: 200px;
+    height: 20px;
+    display: block;
+    float: right;
+    margin: 10px;
+
+}
+
+#printPost{
+    border-bottom: black
+}
 @media (max-width:320px){
 
 .logIn main{

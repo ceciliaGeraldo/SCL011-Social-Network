@@ -5,10 +5,15 @@ export const initFeed = () => {
     const divContainer = document.getElementById('root');
     divContainer.innerHTML = "";
     divContainer.innerHTML +=
-        `<main>
-                <div>
-                    <h1>Hola Mundo, bienvenid@ al feed</h1>
-                    <textarea class=""  id="textareaPost" ></textarea>  
+        `<header>
+        <div>
+            <a href="#/home"><img src="/assets/images/cultivate-logo.png" alt="cultivate" class="logofeed"></a>
+        </div>
+         </header>
+        
+        <main>
+                <div id="containerPost">
+                    <textarea class=""  id="textareaPost" placeholder="Escribe tus datos aquí"></textarea>  
 
                     <button id="post">Publicar</button>
 
@@ -37,12 +42,17 @@ signOut.addEventListener("click", ()=>{
 })
 }
 //let containerPost = document.getElementById("rootPost")
+
+// vista de post impresos
 export let imprimir = (doc)=>{
  
     document.getElementById("rootPost").innerHTML += `
-    <p>${doc.data().text}</p>
-    <p>${doc.data().uId}</p>
-    <p>${doc.data().userName}</p>
+    <div id="printPost">
+        <p>${doc.data().userName}</p>
+        <p>${doc.data().text}</p>
+        <p>${doc.data().uId}</p>
+        
+    </div>
     <button id="signOut">Eliminar Post</button>
     `
 }

@@ -4,6 +4,8 @@ import {templateSendingMail} from './assets/views/sendingEmail.js'
 import {initFeed} from './assets/views/feed.js'
 import {templateForgotPassword} from './assets/views/forgotPassword.js'
 
+
+
 /* changeRouter llama a la función que carga cada template */
 const changeRouter = (hash) => {
     if(hash === ''){
@@ -70,15 +72,15 @@ const changeRouter = (hash) => {
   }
   
   /* initRouter es la función que 'escucha' los cambios de hash */
-  export const initRouter = () => {
-    window.addEventListener('load', changeRouter(window.location.hash));
-  
-    // reconoce un cambio en el hash y le pasa ese nuevo hash a changeRouter
-    if ('onhashchange' in window) {
-      window.onhashchange = () => {
-        changeRouter(window.location.hash);
-      }
+export const initRouter = () => {
+  window.addEventListener('load', changeRouter(window.location.hash));
+
+  // reconoce un cambio en el hash y le pasa ese nuevo hash a changeRouter
+  if ('onhashchange' in window) {
+    window.onhashchange = () => {
+      changeRouter(window.location.hash);
     }
-    
   }
+  
+}
   

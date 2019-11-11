@@ -6,11 +6,11 @@
     overflow-x: hidden;
 }
 
-body{
+/* body{
     background-color: #F9F5E7;
     overflow-x: hidden;
     
-}
+} */
 
 p{
     font-size: 12px;
@@ -64,18 +64,7 @@ p{
     justify-content: space-around;
     font-size: 16px;
 }
-#topNavHome{
-    
-    
-    display: flex;
-    flex-direction: row;
-    background-color: #FFFFFF;
-    padding-right: 10%;
-    }
 
-header{
-    align-content: center;
-}
 /* botones */
 
 .generic-btn{
@@ -145,6 +134,19 @@ input{
 
 
 /* === Burger Menu === */
+
+body
+{
+  margin: 0;
+  padding: 0;
+  
+  /* make it look decent enough */
+  background: #F9F5E7;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+  
+  overflow-x: hidden; /* needed because hiding the menu on the right side is not perfect,  */
+}
+
 a
 {
   text-decoration: none;
@@ -199,7 +201,7 @@ a:hover
   margin-bottom: 5px;
   position: relative;
   
-  background: #7FCD0D;
+  background: #cdcdcd;
   border-radius: 3px;
   
   z-index: 1;

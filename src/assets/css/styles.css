@@ -119,20 +119,20 @@ input{
 }*/
 
 .logofeed{
-    width: 60px;
+    
     width: 170px;
-    margin: 30px;
+    margin: 5px 10px 30px;
 }
 #textareaPost{
     font-size: 14px;  
-    width: 400px;
+    width: 390px;
     height: 80px;
-    border-radius: 5px;
-    text-align: center;
+    border-radius: 10px;
+    text-align: justify;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    border-color: #7FCD0D;
+    border: #FBF9F9 outset 6px;
 
 }
 
@@ -143,11 +143,102 @@ input{
     display: block;
     float: right;
     margin: 10px;
+    margin: 10px 10px 30px;
+    color: white;
+    
 
 }
 
 #printPost{
-    border-bottom: black
+    border: 1px groove #FCFCFA;
+    width: 390px;
+    border-radius: 10px;
+    background: #FBF9F9;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0.5px 0.5px 10px #999;
+}
+#printPost2{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap
+
+}
+#deleteBtn{
+    float: right;
+    margin: 5px 10px 10px;
+    background-color: #7FCD0D;
+    color: white;
+    cursor: pointer;
+}
+
+.userName{
+    display: block;
+    font-size: 17px;
+    font-weight: 700;
+    float: left;
+    text-align: justify;
+    margin: 10px 15px 1px 15px;
+}
+
+.text{
+    font-size: 14px;
+    font-weight: 300;
+    float: left;
+    text-align: justify;
+}
+
+.email{
+    font-size: 12px;
+    font-weight: 300;
+    float: left;
+    text-align: justify;
+    margin: 1px 15px;
+    font-style: oblique;
+}
+
+#iconCultivate{
+    width:50px ;
+    height: 50px;
+    float: left;
+}
+
+#rootPost{
+    width: 100%;
+}
+
+#fixedMenu {
+    width:98% ;
+    height:60px ;
+    position:fixed ; 
+    bottom:0 ;
+    right:0 ; 
+    left:0 ;
+    overflow:auto ; 
+    background-color:white ;
+    border-radius: 5px 5px 5px 5px;
+    border:1px solid #000000;
+    display: inline-block;
+    text-align: -webkit-center;
+
+
+}
+
+.prueba{
+    display: inline;
+    font-size: 18px;
+}    
+
+.icono i{
+   
+    color: #7FCD0D;
+    font-size: 40px;
+    display: inline;
+}
+
+.icono{
+    display: inline;
+    margin: 30px 40px 0px 40px;
 }
 @media (max-width:320px){
 

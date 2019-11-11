@@ -49,6 +49,7 @@ export const templateLogIn = () => {
     document.getElementById("registerHere").addEventListener('click', ()=>{
         divContainer.innerHTML="";
         templateSignUp();
+        window.location.hash = '#/register';
     })
     document.getElementById("GoHome").addEventListener('click', () => {
         let emailLogIn = document.getElementById("emailLogIn").value;

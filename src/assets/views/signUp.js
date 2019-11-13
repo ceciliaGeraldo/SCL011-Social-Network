@@ -12,7 +12,7 @@ const divContainer = document.getElementById('root');
 divContainer.innerHTML+=
         ` 
         <header>
-            <div>
+            <div class="signup-logo">
                 <a href="#"><img src="/assets/images/cultivate-logo.png" alt="cultivate" class="logo"></a>
             </div>
         </header>
@@ -22,7 +22,7 @@ divContainer.innerHTML+=
                 <button class="login-tab" id="login">Login</button>
                 <button class="login-tab" id="signUp">Registrarse</button>
             </div>
-                    <p>Regístrate y comparte información relacionada a tus cultivos.</p>
+                <p>Regístrate y comparte información relacionada a tus cultivos.</p>
                 <input type="text" id="name" placeholder="Ingrese Nombre">
                 <input type="email" id="email" placeholder="Ingrese correo" required="required" >
                 <div id="root2"></div>

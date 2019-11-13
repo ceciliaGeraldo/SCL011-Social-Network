@@ -6,10 +6,11 @@
     overflow-x: hidden;
 }
 
-body{
+/* body{
     background-color: #F9F5E7;
     overflow-x: hidden;
-}
+    
+} */
 
 p{
     font-size: 12px;
@@ -19,9 +20,14 @@ p{
 
 /* === LogIn === */
 
-.logo{
-    width: 70%;
-    margin: 40px;
+header .logo{
+    width: 50%;
+   
+} 
+
+.banner{
+    width: 100%;
+    
 }
 
 /* === Tabs === */
@@ -43,11 +49,23 @@ p{
 .login-tab:active{
     border-bottom: 2px solid #7FCD0D;
 }
+
+.btn-nav{
+    background: none;
+    border: 2px solid #996600;
+    border-radius: 3px;
+    color: #996600;
+    font-weight: bold;
+    /* margin: 60px 20px; */
+    width: 15%;
+    
+}
 #topNavSign{
     display: flex;
     justify-content: space-around;
     font-size: 16px;
 }
+
 /* botones */
 
 .generic-btn{
@@ -113,6 +131,113 @@ input{
     font-size: 14px;
     font-weight: bold;
 }
+.signup-logo img{
+    width: 40%;
+}
+/* === Home === */
+header{
+
+    height: 150px;
+    align-content: center;
+    
+}
+
+header img{
+    height: 70%;
+    margin: 15px 30px 0px 20px; 
+}
+
+header button{
+
+    padding: 5px;
+    align-items: flex-end;
+}
+
+
+.container {
+    position: relative;
+    width: 100%;
+  }
+  .container img {
+    width: 100%;
+    height: auto;
+  }
+  .container .btn {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #FFFFFF;
+    color: #7FCD0D;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    width: 30%; 
+    height: 35px;
+  }
+  
+  .container .btn:hover {
+    background-color: #996600;
+    color: #FFFFFF;
+  }  
+
+  .container .banner-text{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    font-size: 15px;
+
+
+  }
+
+  .container #banner-title{
+
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .info-desktop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px;
+  }
+
+  .info-desktop img{
+      width: 15%;
+      
+  }
+  
+  .info-desktop #info-title{
+    font-weight: bold;
+  }
+  .info-desktop p{
+
+    width: 45%;
+  }
+
+  footer{
+      background-color: #7FCD0D;
+      display: block;
+      
+  }
+
+  footer p{
+    color: #FFFFFF;
+  }
 
 /*Inicio feed
 #containerPost{

@@ -51,6 +51,7 @@ export const registeredEmail = (errorCode) => {
     }}
 
 
+
 // Acceso con usuario ya creado
 
 export const LogIn = (emailLogIn, passwordLogIn) =>{
@@ -115,6 +116,7 @@ export const observer = () => {
 
       if (emailVerified === true) {
         console.log("Iniciada sesión");
+        initFeed();
       } else {
         console.log("El correo no está registrado o no ha sido verificado")
 

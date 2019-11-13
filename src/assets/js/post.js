@@ -19,6 +19,8 @@ db.collection("users").add({
 .catch(function(error) {
     console.error("Error adding document: ", error);
 });
+
+return createPost
 }
 
 // .onSnapshot Para imprimir los post en tiempo "real" en pantalla
@@ -59,5 +61,5 @@ export function deletePost(id){
         }).catch(function(error) {
                 console.error("Error removing document: ", error);
         });
+    return deletePost
 }
-

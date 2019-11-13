@@ -14,8 +14,8 @@ const init = () => {
 
     observer();
     //templateCSS();
-    templateHome();
-    //initRouter();
+    //templateHome();
+    initRouter();
     //templateSignUp();
     
 

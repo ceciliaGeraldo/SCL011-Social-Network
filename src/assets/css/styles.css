@@ -20,9 +20,9 @@ p{
 
 /* === LogIn === */
 
- .logo{
-    width: 30%;
-    margin: 40px;
+header .logo{
+    width: 50%;
+   
 } 
 
 .banner{
@@ -132,20 +132,25 @@ input{
     font-weight: bold;
 }
 .signup-logo img{
-    width: 50%;
-
+    width: 40%;
 }
 /* === Home === */
 header{
 
-    height: 120px;
-    align-content: right;
+    height: 150px;
+    align-content: center;
     
 }
 
-header .logo{
+header img{
     height: 70%;
-    margin: 15px 5px 0px 20px; 
+    margin: 15px 30px 0px 20px; 
+}
+
+header button{
+
+    padding: 5px;
+    align-items: flex-end;
 }
 
 

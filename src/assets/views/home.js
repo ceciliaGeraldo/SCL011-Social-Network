@@ -19,7 +19,7 @@ export const templateHome = () => {
                 <img src="/assets/images/bannerCultivate2.png" alt="bannerSeed" class="banner">
                 <p id="banner-title" class="banner-text">Dedícate 100% a tu autocultivo</p>
                 <p class="banner-text">¡Regístrate y sé parte de nuestra gran comunidad de horticulura!</p>
-                <button class="btn">Únete </button>   
+                <button id="btn-join" class="btn">Únete </button>   
             </div> 
             <div class="info-desktop">
                 <img src="/assets/images/cultivate-rounded.png" alt="cultivate-redondo">
@@ -45,7 +45,12 @@ export const templateHome = () => {
     })
 
     document.getElementById('login').addEventListener('click', ()=>{
-        wdivContainer.innerHTML=""
+        divContainer.innerHTML=""
         templateLogIn();
+    })
+
+    document.getElementById('btn-join').addEventListener('click', ()=>{
+        divContainer.innerHTML="";
+        templateSignUp();
     })
 }

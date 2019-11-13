@@ -12,7 +12,7 @@ const divContainer = document.getElementById('root');
 divContainer.innerHTML+=
         ` 
         <header>
-            <div>
+            <div class="signup-logo">
                 <a href="#"><img src="/assets/images/cultivate-logo.png" alt="cultivate" class="logo"></a>
             </div>
         </header>

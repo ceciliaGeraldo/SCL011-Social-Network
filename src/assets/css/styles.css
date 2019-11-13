@@ -20,10 +20,10 @@ p{
 
 /* === LogIn === */
 
-/* .logo{
+ .logo{
     width: 30%;
     margin: 40px;
-} */
+} 
 
 .banner{
     width: 100%;
@@ -58,7 +58,7 @@ p{
     font-weight: bold;
     /* margin: 60px 20px; */
     width: 15%;
-    align-items: flex-end;
+    
 }
 #topNavSign{
     display: flex;
@@ -131,17 +131,24 @@ input{
     font-size: 14px;
     font-weight: bold;
 }
+.signup-logo img{
+    width: 50%;
 
+}
 /* === Home === */
 header{
 
-    height: 100px;
+    height: 120px;
+    align-content: right;
+    
 }
 
 header .logo{
     height: 70%;
     margin: 15px 5px 0px 20px; 
 }
+
+
 .container {
     position: relative;
     width: 100%;
@@ -160,17 +167,72 @@ header .logo{
     color: #7FCD0D;
     font-weight: bold;
     font-size: 16px;
-    padding: 12px 24px;
+    padding: 0px 15px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
+    width: 30%; 
+    height: 35px;
   }
   
   .container .btn:hover {
-    background-color: black;
+    background-color: #996600;
+    color: #FFFFFF;
   }  
 
+  .container .banner-text{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    font-size: 15px;
+
+
+  }
+
+  .container #banner-title{
+
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .info-desktop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px;
+  }
+
+  .info-desktop img{
+      width: 15%;
+      
+  }
+  
+  .info-desktop #info-title{
+    font-weight: bold;
+  }
+  .info-desktop p{
+
+    width: 45%;
+  }
+
+  footer{
+      background-color: #7FCD0D;
+      display: block;
+      
+  }
+
+  footer p{
+    color: #FFFFFF;
+  }
 
 @media (max-width:320px){
 

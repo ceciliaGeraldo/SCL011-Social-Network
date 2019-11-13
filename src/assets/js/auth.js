@@ -51,6 +51,7 @@ export const registeredEmail = (errorCode) => {
     }}
 
 
+
 // Acceso con usuario ya creado
 
 export const LogIn = (emailLogIn, passwordLogIn) =>{

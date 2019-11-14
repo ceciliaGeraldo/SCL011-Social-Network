@@ -97,16 +97,20 @@ export let imprimir = (doc )=>{
         
         </div>  
     </div>
-    <button id="deleteBtn" >Eliminar</button>
+    <button id="deleteBtn" value =${doc.id}>Eliminar</button>
     
+       
 
     `
     // Borrar post
     
     let deleteBtnId = doc.id;
     console.log(deleteBtnId);
+    
   
-    let deletePostBtn = document.getElementById("deleteBtn" );
+    let deletePostBtn = document.querySelector("#deleteBtn");
+   
+    
     deletePostBtn.addEventListener("click", ()=>{
      
             deletePost(deleteBtnId)

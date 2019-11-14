@@ -1,7 +1,7 @@
-import {checkEmail} from './assets/js/validation.js'
-import {initFeed } from './assets/views/feed.js'
-import { error1 } from './assets/views/signUp.js';
-import {templateLogIn, error2} from './assets/views/logIn.js'
+import {checkEmail} from '/assets/js/validation.js'
+import {initFeed } from '/assets/views/feed.js'
+import { error1 } from '/assets/views/signUp.js';
+import {templateLogIn, error2} from '/assets/views/logIn.js'
 
 // coleccion de prueba para tomar usuario
 //que no pueda escribir un post vacio

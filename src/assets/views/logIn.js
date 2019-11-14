@@ -1,6 +1,6 @@
-import { templateSignUp } from './assets/views/signUp.js'
-import { authGoogle, authFacebook, LogIn } from './assets/js/auth.js'
-import {templateForgotPassword} from './assets/views/forgotPassword.js'
+import { templateSignUp } from '/assets/views/signUp.js'
+import { authGoogle, authFacebook, LogIn } from '/assets/js/auth.js'
+import {templateForgotPassword} from '/assets/views/forgotPassword.js'
 
 export const templateLogIn = () => {
     const divContainer = document.getElementById('root');

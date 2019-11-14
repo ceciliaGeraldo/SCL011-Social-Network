@@ -1,8 +1,8 @@
 
 //Vista de registros
-import { createUser , authGoogle, authFacebook } from '/assets/js/auth.js'
-import {templateLogIn} from '/assets/views/logIn.js'
-import {valideImput ,validEmail , validPassword, validRepeatPassword} from '/assets/js/validation.js'
+import { createUser , authGoogle, authFacebook } from './assets/js/auth.js'
+import {templateLogIn} from './assets/views/logIn.js'
+import {valideImput ,validEmail , validPassword, validRepeatPassword} from './assets/js/validation.js'
 import {templateSendingMail} from '/assets/views/sendingEmail.js'
 //import { validPassword } from '../js/validation'
 

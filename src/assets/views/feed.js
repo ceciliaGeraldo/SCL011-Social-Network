@@ -1,4 +1,4 @@
-import {signOutSession} from '/assets/js/auth.js'
+import {signOutSession} from './assets/js/auth.js'
 import {createPost ,printResultPost, deletePost } from '/assets/js/post.js'
 
 export const initFeed = () => {

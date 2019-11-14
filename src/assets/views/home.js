@@ -1,5 +1,5 @@
-import { templateSignUp } from '/assets/views/signUp.js'
-import {templateLogIn} from '/assets/views/logIn.js'
+import { templateSignUp } from './assets/views/signUp.js'
+import {templateLogIn} from './assets/views/logIn.js'
 
 
 export const templateHome = () => {

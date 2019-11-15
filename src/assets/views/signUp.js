@@ -31,6 +31,7 @@ divContainer.innerHTML+=
 
                 <input type="password" id="repeatPassword" placeholder="Repita contraseña">
                 <div id="printResultRepeatPassword"></div>
+                <div id="printResultFields"></div>
 
                 <button class="generic-btn" id="register">Registrarse</button>
             </div>
@@ -52,14 +53,14 @@ let name =document.getElementById("name").value;
 
 
 
-const divContainer2 = document.getElementById('root1');
+const divContainer2 = document.getElementById('printResultFields');
 const divContainer3 = document.getElementById('root2');
 const divResultPassword = document.getElementById('printResultPassword');
 const divResultRepeatPassword = document.getElementById('printResultRepeatPassword');
 
 
 //Limpiar imputs
-document.getElementById('root1').innerHTML ="";
+document.getElementById('printResultFields').innerHTML ="";
 document.getElementById('root2').innerHTML="";
 document.getElementById('printResultPassword').innerHTML="";
 
@@ -119,6 +120,7 @@ document.getElementById("logInHere").addEventListener('click', ()=>{
 // Vericar que el email ya ha sido verificado 
 export const error1 = (errorCode) =>{
     if (errorCode == 'auth/email-already-in-use'){
+        alert("ya usado")
       document.getElementById("root2").innerHTML= "Email ingresado ya fue registrado"
-    //alert("ya usado")
+    //
     }}

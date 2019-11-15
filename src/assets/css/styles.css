@@ -6,11 +6,11 @@
     overflow-x: hidden;
 }
 
-/* body{
+body{
     background-color: #F9F5E7;
     overflow-x: hidden;
     
-} */
+}
 
 p{
     font-size: 12px;
@@ -294,6 +294,7 @@ header button{
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0.5px 0.5px 10px #999;
+    margin-bottom: 30px
 }
 #printPost2{
     display: flex;
@@ -347,7 +348,7 @@ header button{
 }
 
 #fixedMenu {
-    width:98% ;
+    width:100% ;
     height:60px ;
     position:fixed ; 
     bottom:0 ;
@@ -395,6 +396,105 @@ footer{
     cursor: pointer
 }
 
+#errorContainerLogIn , #root2 ,#printResultPassword ,#printResultFields{
+    display: block;
+    margin-left: 60px;
+}
+
+#headerDesk{
+    height: 100px;
+}
+
+@media screen and (min-width:1501px) and (max-width:1800px){
+    #blockImg{
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        width: 400px;
+        height: 100%;
+        margin: 0px;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        float: left;
+        background-image: url("https://i.pinimg.com/originals/f4/a1/aa/f4a1aadb12edbc3d92a68ac8c7d896e8.jpg");
+        background-position: top;
+        position: absolute;
+      
+    }
+
+    #textareaPost{
+        font-size: 16px;
+        width: 950px;
+        height: 70px;
+        margin-left: 450px
+    
+    }
+
+    #post{
+        width: 950px;
+        height: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+    }
+
+    #printPost{
+       
+        width: 950px;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 30px ;
+      
+            
+    }
+        #deleteBtn{
+            margin: 2px 10px 20px 650px;
+            width: 300px;
+            height: 25px;
+            border-radius: 8px;
+            position: relative;
+           
+        } 
+    
+        #fixedMenu {
+            display:none
+        
+        
+        }
+    
+        #prueba{
+        width: 970px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-left: 450px
+        }
+    
+        .iconoHeader{
+        float: right;
+        margin: 20px 10px 20px 10px;
+        display: block
+        }
+
+        .iconoHeader i{
+        font-size: 50px ;
+        color:#AA6600;
+        
+    }
+
+    #headerDesk{
+        
+        height: 90px;
+    }
+
+    #alertpost{
+        margin-left: 450px
+    }
+
+
+
+}
 
 @media screen and (min-width:1025px) and (max-width:1500px){
 
@@ -402,7 +502,7 @@ footer{
         background-repeat: no-repeat;
         background-size: cover;
         display: block;
-        width: 400px;
+        width: 300px;
         height: 100%;
         margin: 0px;
         -webkit-background-size: cover;
@@ -423,7 +523,7 @@ footer{
         font-size: 16px;
         width: 700px;
         height: 70px;
-        margin-left: 450px
+        margin-left: 350px
     
     }
 
@@ -442,8 +542,8 @@ footer{
         margin-left: auto;
         margin-right: auto;
         margin-top: 20px;
-        margin-bottom: 1px ;
-        margin-top: 0px;
+        margin-bottom: 3px ;
+        
             
     }
         #deleteBtn{
@@ -465,7 +565,7 @@ footer{
         width: 720px;
         margin-left: auto;
         margin-right: auto;
-        margin-left: 450px
+        margin-left: 350px
         }
     
         .iconoHeader{
@@ -523,13 +623,13 @@ footer{
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    margin-bottom: 1px ;
+    margin-bottom: 30px ;
     margin-top: 0px;
         
 }
     #deleteBtn{
         margin: 2px 10px 25px 650px;
-        width: 1708px;
+        width: 170px;
         height: 25px;
         border-radius: 8px;
         position: relative;
@@ -596,7 +696,7 @@ footer{
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    margin-bottom: 1px ;
+    margin-bottom: 30px ;
     margin-top: 0px;
         
 }  

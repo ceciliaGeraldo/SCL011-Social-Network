@@ -53,13 +53,13 @@ export let printResultPost = () =>{
 
 // Borrar post
 
-export function deletePost(id){
-    let db = firebase.firestore(); 
-        db.collection("users").doc(id).delete()
-        .then(function() {
-                console.log("Document successfully deleted!");
-        }).catch(function(error) {
-                console.error("Error removing document: ", error);
-        });
-    return deletePost
-}
+// export function deletePost(id){
+//     let db = firebase.firestore(); 
+//         db.collection("users").doc(id).delete()
+//         .then(function() {
+//                 console.log("Document successfully deleted!");
+//         }).catch(function(error) {
+//                 console.error("Error removing document: ", error);
+//         });
+//     return deletePost
+// }

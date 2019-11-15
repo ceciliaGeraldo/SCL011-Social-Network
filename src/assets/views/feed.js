@@ -1,5 +1,7 @@
 import {signOutSession} from '/assets/js/auth.js'
-import {createPost ,printResultPost, deletePost } from '/assets/js/post.js'
+import {createPost ,printResultPost} from '/assets/js/post.js'
+import {templateHome} from '/assets/views/home.js'
+
 
 export const initFeed = () => {
     const divContainer = document.getElementById('root');
@@ -37,7 +39,7 @@ export const initFeed = () => {
             </main>
             <footer id="fixedMenu">
             <a id="" class="icono"><i class="fas fa-home"></i></a>
-            <a  id="icono-Out" class="icono"><i class="fas fa-sign-out-alt"></i></a>
+            <a  id="icono-OutResponsive" class="icono"><i class="fas fa-sign-out-alt"></i></a>
             </footer>  
         
             
@@ -71,10 +73,20 @@ document.getElementById("alertpost").innerHTML="";
 
  })
 
+ const signOutResponsive = document.getElementById('icono-OutResponsive');
+ signOutResponsive.addEventListener("click", ()=>{
+    document.getElementById('root').innerHTML="";
+    signOutSession()
+    templateHome();
+
+})
+
 const signOut = document.getElementById('icono-Out');
 signOut.addEventListener("click", ()=>{
-    signOutSession();
-    divContainer.innerHTML="Sesión Cerrada";
+    document.getElementById('root').innerHTML="";
+    signOutSession()
+    templateHome();
+   
     
 
 })
@@ -97,25 +109,25 @@ export let imprimir = (doc )=>{
         
         </div>  
     </div>
-    <button id="deleteBtn" value =${doc.id}>Eliminar</button>
+   
     
        
 
     `
     // Borrar post
     
-    let deleteBtnId = doc.id;
-    console.log(deleteBtnId);
+    // let deleteBtnId = doc.id;
+    // console.log(deleteBtnId);
     
   
-    let deletePostBtn = document.querySelector("#deleteBtn");
+    // let deletePostBtn = document.querySelector("#deleteBtn");
    
     
-    deletePostBtn.addEventListener("click", ()=>{
+    // deletePostBtn.addEventListener("click", ()=>{
      
-            deletePost(deleteBtnId)
+    //         deletePost(deleteBtnId)
        
-    })
+    // })
 
 }
 

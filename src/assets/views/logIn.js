@@ -19,19 +19,19 @@ export const templateLogIn = () => {
                     
                     <p>Regístrate y comparte información relacionada a tus cultivos.</p>
                     <button  class="generic-btn" id="google">Iniciar sesión con Google</button>
-                    <button  class="generic-btn" id="facebook">Iniciar sesión con Facebook</button>
+                    
                     
                     <input type="email" id="emailLogIn" placeholder="Correo electrónico">
                     <input type="password" id="passwordLogIn" placeholder="Contraseña">
                     <button class="generic-btn" id="GoHome">Ingresar</button>
-                    
-                    <a><p id="ifForgotPassword" class="link-bold">¿Olvidaste tu contraseña?</p></a>
+                    <div id="errorContainerLogIn"></div>
+                    <a><p id="ifForgotPassword" class="link-bold"></p></a>
                     
             <div> 
             <div id="logInFooter">
             ¿Aún no tienes cuenta? Regístrate  <a><span class="link-bold" id="registerHere">aquí</span></a>
             </div>
-                    <div id="errorContainerLogIn"></div>
+                    
               
             </main>`
     document.getElementById("signUp").addEventListener('click', () => {
@@ -68,13 +68,13 @@ export const templateLogIn = () => {
 
     });
 
-    const btnFacebook = document.getElementById("facebook");
-    btnFacebook.addEventListener("click", () => {
+    // const btnFacebook = document.getElementById("facebook");
+    // btnFacebook.addEventListener("click", () => {
 
-        authFacebook();
+    //     authFacebook();
 
 
-    });
+    // });
 
 }
 //verificaciones de correo y contraseña con usuario ya registrado

@@ -88,6 +88,7 @@ Los temas de mayor interés son:
 
 
 ## Planificación
+  ### [Trello](https://trello.com/b/D3LahHkl)
 
 
 ## Flujo y Prototipado

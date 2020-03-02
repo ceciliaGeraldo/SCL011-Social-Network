@@ -8,6 +8,7 @@ export const templateHome = () => {
         `<header>
             
                 <a href="#/home"><img src="/assets/images/cultivate-logo.png" alt="cultivate"></a>
+                
                 <button class="btn-nav" id="signUp">Registrarse</button>
                 <button class="btn-nav" id="login">Iniciar Sesión</button>
                 

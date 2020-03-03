@@ -659,9 +659,25 @@ footer{
     color:#AA6600;
     
 }
+header img {
+  height: 60%;
+  
+}
+.container #banner-title {
+  
+  top: 15%;
+  
+}
 
+.container .banner-text {
+ 
+  top: 35%;
+  
+}
 
-
+p{
+  font-size: 16px;
+}
 }
 
 @media screen  and (max-width:750px) and (min-width:500px){ 
@@ -730,15 +746,82 @@ margin-right: auto;
     font-size: 30px ;
     color:#AA6600
 }
+header img {
+  height: 30%;
+  margin: 15px 30px 0px 20px;
+}
+ .btn-nav {
+  
+  width: 22%;
+  margin-left: 10px;
+} 
+
+.container #banner-title {
+  top: 18%;
+  
+}
+
+.container .btn {
+
+  top: 80%;
+  left: 50%;
+  
+}
+.container img {
+  
+  height: 200px;
+}
+.container .banner-text {
+  
+  top: 45%;
+  width: 300px;
+}
+.info-desktop {
+
+  padding-top: 20px;
+}
 }
 
 
-/*@media (max-width:320px){
-
-.logIn main{
-    display: flex;
-    flex-direction: column;
+@media screen  and (max-width:499px) and (min-width:300px){
+  header img {
+    height: 30%;
+    margin: 15px 30px 0px 20px;
+}
+header img {
+  height: 25%;
+  margin: 15px 10px 0px 10px;
+}
+.container img {
+  height: 150px;
+}
+header {
+  height: 110px;
+  
+}
+.container #banner-title {
+  top: 12%;
+  width: 200px;
+}
+.container .banner-text {
+  top: 42%;
+  width: 300px;
 }
 
+.container .btn {
+  
+  top: 80%;
+  left: 50%;
+  width: 25%;
+  height: 28px;
 }
+
+.info-desktop p {
+  width: 50%;
+}
+.btn-nav{
+  width: 30%;
+}
+ }
+
 
